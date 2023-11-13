@@ -1,0 +1,31 @@
+{
+  "description": "Switch to Chrome (Swap)",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "d",
+        "modifiers": {
+          "mandatory": [
+            "shift",
+            "command"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "1",
+          "modifiers": [
+            "control"
+          ]
+        },
+        {
+          "key_code": "f15"
+        },
+        {
+          "shell_command": "open -a '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

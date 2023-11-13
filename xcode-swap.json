@@ -1,0 +1,31 @@
+{
+  "description": "Switch to Xcode",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "d",
+        "modifiers": {
+          "mandatory": [
+            "shift",
+            "command"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "1",
+          "modifiers": [
+            "control"
+          ]
+        },
+        {
+          "key_code": "f10"
+        },
+        {
+          "shell_command": "open -a '/Applications/Xcode.app'"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "description": "Switch to Firefox Dev Space 1 (Swap)",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "d",
+        "modifiers": {
+          "mandatory": [
+            "shift",
+            "command"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "1",
+          "modifiers": [
+            "control"
+          ]
+        },
+        {
+          "key_code": "f10"
+        },
+        {
+          "shell_command": "CUR_APP=$(osascript -e 'tell application \"System Events\" to tell (first process whose frontmost is true) to return name'); CUR_CO=\"tell application \\\"System Events\\\" to POSIX path of (file of process \\\"$CUR_APP\\\" as alias)\"; osascript -e \"$CUR_CO\" >> ~/output.txt"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
