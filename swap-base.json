@@ -1,0 +1,28 @@
+{
+  "description": "Switch to # (Swap Slot 1)",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "#",
+        "modifiers": {
+          "mandatory": [
+            "shift",
+            "command"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "1",
+          "modifiers": [
+            "control"
+          ]
+        },
+        {
+          "shell_command": "open -a '#'"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

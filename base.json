@@ -18,6 +18,58 @@
                 },
                 "rules": [
                     {
+                        "description": "Assign Swap Slot 1 ",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/Users/saint/bin/karamake/karamake2 d"
+                                    }
+
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
+                    {
+                        "description": "Assign Swap Slot 2 ",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/Users/saint/bin/karamake/karamake2 f"
+                                    }
+
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
+
+
+                    {
                         "description": "Swap to Xcode",
                         "manipulators": [
                             {
@@ -367,9 +419,6 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f14"
-                                    },
-                                    {
                                         "key_code": "1",
                                         "modifiers": [
                                             "control"
@@ -638,14 +687,6 @@
                                         "modifiers": [
                                             "control"
                                         ]
-                                    },
-                                    {
-                                        "key_code": "1",
-                                        "modifiers": [
-                                            "control",
-                                            "shift",
-                                            "option"
-                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -653,7 +694,7 @@
                         ]
                     },
                     {
-                        "description": "Switch to 2 Space, switch to ff dev ",
+                        "description": "Switch to 2 Space",
                         "manipulators": [
                             {
                                 "from": {
@@ -670,17 +711,6 @@
                                         "key_code": "2",
                                         "modifiers": [
                                             "control"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'"
-                                    },
-                                    {
-                                        "key_code": "2",
-                                        "modifiers": [
-                                            "control",
-                                            "shift",
-                                            "option"
                                         ]
                                     }
 
@@ -707,14 +737,6 @@
                                         "key_code": "3",
                                         "modifiers": [
                                             "control"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "3",
-                                        "modifiers": [
-                                            "control",
-                                            "shift",
-                                            "option"
                                         ]
                                     }
                                 ],
@@ -828,9 +850,6 @@
                                     },
                                     {
                                         "shell_command": "open -a '/Applications/Whale.app'"
-                                    },
-                                    {
-                                        "key_code": "f13"
                                     }
                                 ],
                                 "type": "basic"
@@ -1000,71 +1019,6 @@
                                 "to": [
                                     {
                                         "shell_command": "open -a '/System/Library/CoreServices/Finder.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Switch to iOS Simulator",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "1",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator'"
-                                    },
-                                    {
-                                        "key_code": "t",
-                                        "modifiers": [
-                                            "control",
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Switch to Xcode",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "1",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/Xcode.app'"
                                     }
                                 ],
                                 "type": "basic"
