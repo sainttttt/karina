@@ -67,6 +67,88 @@
                         ]
                     },
 
+                    {
+                        "description": "Audacity Record",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a '/Applications/Audacity.app/Contents/MacOS/Audacity'"
+                                    },
+                                    {
+                                      "key_code": "escape",
+                                      "hold_down_milliseconds": 500
+                                    },
+                                    {
+                                      "key_code": "r"
+                                    },
+                                    {
+                                      "key_code": "escape",
+                                      "hold_down_milliseconds": 1000
+                                    },
+                                    {
+                                      "key_code": "m",
+                                      "modifiers": [
+                                          "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
+                    {
+                        "description": "Audacity Stop",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a '/Applications/Audacity.app/Contents/MacOS/Audacity'"
+                                    },
+                                    {
+                                      "key_code": "escape",
+                                      "hold_down_milliseconds": 500
+                                    },
+                                    {
+                                      "key_code": "spacebar"
+                                    },
+                                    {
+                                      "key_code": "escape",
+                                      "hold_down_milliseconds": 1000
+                                    },
+                                    {
+                                      "key_code": "m",
+                                      "modifiers": [
+                                          "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
 
 
                     {
@@ -1655,40 +1737,6 @@
                                 "to": [
                                     {
                                         "key_code": "y",
-                                        "modifiers": [
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "iterm vim second paste",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
                                         "modifiers": [
                                             "option"
                                         ]

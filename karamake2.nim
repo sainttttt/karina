@@ -12,16 +12,26 @@ proc run() =
   if paramCount() == 0:
     return
 
-  var currentProg = execProcess("CUR_APP=$(osascript -e 'tell application \"System Events\" to tell (first process whose frontmost is true) to return name'); CUR_CO=\"tell application \\\"System Events\\\" to POSIX path of (file of process \\\"$CUR_APP\\\" as alias)\"; osascript -e \"$CUR_CO\"").replace("\n", "")
+  # var currentProg = execProcess("CUR_APP=$(osascript -e 'tell application \"System Events\" to tell (first process whose frontmost is true) to return name'); CUR_CO=\"tell application \\\"System Events\\\" to POSIX path of (file of process \\\"$CUR_APP\\\" as alias)\"; osascript -e \"$CUR_CO\"").replace("\n", "")
 
-  print currentProg
+  # var currentProg = execProcess("CUR_APP=$(osascript -e 'tell application \"System Events\" to tell (first process whose frontmost is true) to return name'); echo $CUR_APP")
 
+  var currentProg = execProcess("lsappinfo info -only bundlepath `lsappinfo front`")
+  currentProg = currentProg.replace(""""LSBundlePath"=""", "")
+
+  var currentSpace = execProcess("""osascript -e 'tell application ¬' -e    '"System Events" to tell process ¬' -e    '"WhichSpace" to set temp to (title of menu bar items of menu bar 1)' -e 'return item 1 of temp'""")
+
+
+  currentSpace = currentSpace.replace("\n", "")
 
   var baseJson = parseJson(openFileStream(baseJsonFile))
   var baseSwapJson = parseJson(openFileStream(baseSwapJsonFile))
 
   var key_code = baseSwapJson["manipulators"][0]["from"]["key_code"].getStr
   baseSwapJson["manipulators"][0]["from"]["key_code"] = %key_code.replace("#", paramStr(1))
+
+  var space = baseSwapJson["manipulators"][0]["to"][0]["key_code"].getStr
+  baseSwapJson["manipulators"][0]["to"][0]["key_code"] = %space.replace("#", currentSpace)
 
   var cmd = baseSwapJson["manipulators"][0]["to"][1]["shell_command"].getStr
   baseSwapJson["manipulators"][0]["to"][1]["shell_command"] = %cmd.replace("#", currentProg)
@@ -36,6 +46,6 @@ proc run() =
 
   writeFile(outFile.expandTilde, baseJson.pretty)
 
-  writeFile("~/log2.txt".expandTilde, baseSwapJson.pretty)
+  writeFile("~/log2.txt".expandTilde, currentProg)
 
 run()

@@ -13,13 +13,13 @@
       },
       "to": [
         {
-          "key_code": "1",
+          "key_code": "#",
           "modifiers": [
             "control"
           ]
         },
         {
-          "shell_command": "open -a '#'"
+          "shell_command": "open -a #"
         }
       ],
       "type": "basic"
