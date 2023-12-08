@@ -75,12 +75,18 @@
                                     "key_code": "o",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
+                                            "option",
                                             "shift"
                                         ]
                                     }
                                 },
                                 "to": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
                                     {
                                         "shell_command": "open -a '/Applications/Audacity.app/Contents/MacOS/Audacity'"
                                     },
@@ -90,16 +96,6 @@
                                     },
                                     {
                                       "key_code": "r"
-                                    },
-                                    {
-                                      "key_code": "escape",
-                                      "hold_down_milliseconds": 1000
-                                    },
-                                    {
-                                      "key_code": "m",
-                                      "modifiers": [
-                                          "command"
-                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -116,12 +112,18 @@
                                     "key_code": "p",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
+                                            "option",
                                             "shift"
                                         ]
                                     }
                                 },
                                 "to": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
                                     {
                                         "shell_command": "open -a '/Applications/Audacity.app/Contents/MacOS/Audacity'"
                                     },
@@ -131,16 +133,6 @@
                                     },
                                     {
                                       "key_code": "spacebar"
-                                    },
-                                    {
-                                      "key_code": "escape",
-                                      "hold_down_milliseconds": 1000
-                                    },
-                                    {
-                                      "key_code": "m",
-                                      "modifiers": [
-                                          "command"
-                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -876,6 +868,46 @@
                             }
                         ]
                     },
+
+                    {
+                        "description": "Switch to (Fullscreen) Next 4 Space ",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
+                                    {
+                                      "key_code": "escape",
+                                      "hold_down_milliseconds": 300
+                                    },
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+
+
+
                     {
                         "description": "Switch to Desktop Finder",
                         "manipulators": [

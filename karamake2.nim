@@ -46,6 +46,4 @@ proc run() =
 
   writeFile(outFile.expandTilde, baseJson.pretty)
 
-  writeFile("~/log2.txt".expandTilde, currentProg)
-
 run()
