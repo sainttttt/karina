@@ -1193,7 +1193,7 @@
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
+                                            "option",
                                             "shift"
                                         ]
                                     }
@@ -1224,10 +1224,11 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "command",
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -1245,7 +1246,6 @@
                             }
                         ]
                     },
-
                     {
                         "description": "Discord Jump Down",
                         "manipulators": [
@@ -1259,10 +1259,11 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "command",
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -1280,6 +1281,77 @@
                             }
                         ]
                     },
+
+                    {
+                        "description": "Discord Jump Down Channel",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": [
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "Discord Jump Up Channel",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": [
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+
+
 
                     {
                         "description": "Change fn + h/j/k/l to alt-Arrows",
