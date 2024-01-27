@@ -381,28 +381,6 @@
                     },
 
                     {
-                        "description": "terminal dropdown 2",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "return_or_enter",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f1"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "terminal dropdown",
                         "manipulators": [
                             {
@@ -845,7 +823,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "semicolon",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "mandatory": [
                                             "command",
@@ -874,7 +852,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "quote",
+                                    "key_code": "return_or_enter",
                                     "modifiers": {
                                         "mandatory": [
                                             "command",
@@ -2600,7 +2578,7 @@
                     },
 
                     {
-                        "description": "iterm move tab right 2",
+                        "description": "iterm tmux move tab right 2",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2615,7 +2593,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option",
+                                            "command",
                                             "shift"
                                         ]
                                     }
@@ -2634,7 +2612,7 @@
                     },
 
                     {
-                        "description": "iterm move tab left 2",
+                        "description": "iterm tmux move tab left 2",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2649,7 +2627,7 @@
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option",
+                                            "command",
                                             "shift"
                                         ]
                                     }
@@ -2735,8 +2713,34 @@
                             }
                         ]
                     },
+
                     {
-                        "description": "move splits iterm",
+                        "description": "fullscreen",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f",
+                                        "modifiers": [
+                                            "control",
+                                            "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "vim move splits iterm",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2751,7 +2755,7 @@
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
+                                            "option",
                                             "shift"
                                         ]
                                     }
@@ -2785,7 +2789,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
+                                            "option",
                                             "shift"
                                         ]
                                     }
