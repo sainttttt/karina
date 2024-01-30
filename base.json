@@ -2739,8 +2739,9 @@
                             }
                         ]
                     },
+
                     {
-                        "description": "vim move splits iterm",
+                        "description": "vim move splits iterm left",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2755,8 +2756,7 @@
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option",
-                                            "shift"
+                                            "command"
                                         ]
                                     }
                                 },
@@ -2773,6 +2773,43 @@
                             }
                         ]
                     },
+
+                    {
+                        "description": "vim move splits iterm right",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "l",
+                                        "modifiers": [
+                                            "option",
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+
+
                     {
                         "description": "move splits iterm",
                         "manipulators": [
