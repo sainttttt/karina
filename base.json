@@ -855,7 +855,7 @@
                                     "key_code": "return_or_enter",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
+                                            "option",
                                             "shift"
                                         ]
                                     }
@@ -2722,7 +2722,8 @@
                                     "key_code": "return_or_enter",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "command",
+                                            "shift"
                                         ]
                                     }
                                 },
