@@ -104,6 +104,617 @@
                         ]
                     },
 
+
+                    {
+                        "description": "Move Tabs HL",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                  "key_code": "open_bracket",
+                                  "modifiers": [
+                                    "command",
+                                    "shift"
+                                  ]
+                                },
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                  "key_code": "close_bracket",
+                                  "modifiers": [
+                                    "command",
+                                    "shift"
+                                  ]
+                                },
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                  "key_code": "open_bracket",
+                                  "modifiers": [
+                                    "command"
+                                  ]
+                                },
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                  "key_code": "close_bracket",
+                                  "modifiers": [
+                                    "command"
+                                  ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+
+                    {
+                        "description": "command space to backspace",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+
+                                "to": {
+                                  "key_code": "return_or_enter"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "command space to backspace",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+
+                                "to": {
+                                  "key_code": "return_or_enter"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "tab to backspace",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "tab"
+                                },
+
+                                "to": {
+                                  "key_code": "delete_or_backspace"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+
+                    {
+                        "description": "option space to return",
+                        "manipulators": [
+                            {
+
+                                "from": {
+                                    "key_code": "spacebar",
+
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+
+                                "to": {
+                                  "key_code": "return_or_enter"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                      "description": "option space to option backspace",
+                      "manipulators": [
+                        {
+
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$"
+                              ],
+                              "type": "frontmost_application_unless"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "tab",
+
+                            "modifiers": {
+                              "mandatory": [
+                                "option"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "delete_or_backspace",
+                            "modifiers": [
+                              "option"
+                            ]
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                      "description": "command space to tab",
+                      "manipulators": [
+                        {
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "tab",
+                            "modifiers": {
+                              "mandatory": [
+                                "option"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "w",
+                            "modifiers": [
+                              "control"
+                            ]
+                          },
+
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                        "description": "option space to command space",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+
+                                "to": {
+                                  "key_code": "spacebar",
+                                  "modifiers": [
+                                    "command"
+                                  ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+
+                    {
+                        "description": "backtick backspace",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "grave_accent_and_tilde",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                  "key_code": "grave_accent_and_tilde"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "backtick normal",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "grave_accent_and_tilde"
+                                },
+                                "to": {
+                                  "key_code": "delete_or_backspace"
+                                },
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
+
+                    {
+                        "description": "ctrl n to command n new",
+                        "manipulators": [
+                            {
+
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                    "key_code": "n",
+                                    "modifiers": [
+                                            "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
+                    {
+                        "description": "disable command n new",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                    "key_code": "tab"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
+                    {
+                        "description": "disable command n new",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift",
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                    "key_code": "tab",
+                                    "modifiers": [
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
+                    {
+                        "description": "disable command h hide",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                    "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
+
+                    {
+                        "description": "control e command e",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                    "key_code": "e",
+                                    "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
+
+                    {
+                        "description": "iTerm Change Option + h/j/k/l to Arrows",
+                        "manipulators": [
+                          {
+                            "from": {
+                              "key_code": "j",
+                              "modifiers": {
+                                "mandatory": [
+                                  "option",
+                                  "shift"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "key_code": "down_arrow"
+                              }
+                            ],
+                            "type": "basic"
+                          },
+
+                          {
+                            "from": {
+                              "key_code": "k",
+                              "modifiers": {
+                                "mandatory": [
+                                  "option",
+                                  "shift"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "key_code": "up_arrow"
+                              }
+                            ],
+                            "type": "basic"
+                          }
+                        ]
+                    },
+
+                    {
+                        "description": "Change Option + h/j/k/l to Arrows",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
                     {
                         "description": "Audacity Stop",
                         "manipulators": [
@@ -353,109 +964,6 @@
                         ]
                     },
 
-                    {
-                        "description": "show dock",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "right_shift",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "d",
-                                        "modifiers": [
-                                            "option",
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "terminal dropdown",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f1"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Switch to Reaper",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "b",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f9"
-                                    },
-                                    {
-                                        "key_code": "1",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/REAPER.app/Contents/MacOS/REAPER'"
-                                    }
-                                ],
-
-                                "to_delayed_action": {
-                                  "to_if_invoked": [
-
-                                    {
-                                      "key_code": "grave_accent_and_tilde",
-                                      "modifiers": [
-                                        "command"
-                                      ]
-                                    },
-                                    {
-                                      "key_code": "grave_accent_and_tilde",
-                                      "modifiers": [
-                                        "shift",
-                                        "command"
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "type": "basic",
-                                "parameters": {
-                                  "basic.to_delayed_action_delay_milliseconds": 200
-                                }
-                            }
-                        ]
-                    },
                     {
                         "description": "Switch to terminal",
                         "manipulators": [
@@ -852,10 +1360,10 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "return_or_enter",
+                                    "key_code": "right_shift",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option",
+                                            "command",
                                             "shift"
                                         ]
                                     }
@@ -1230,7 +1738,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "h",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
                                             "command",
@@ -1265,7 +1773,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
                                             "command",
@@ -1305,7 +1813,7 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "command",
-                                            "shift"
+                                            "control"
                                         ]
                                     }
                                 },
@@ -1339,7 +1847,7 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "command",
-                                            "shift"
+                                            "control"
                                         ]
                                     }
                                 },
@@ -1356,19 +1864,14 @@
                         ]
                     },
 
-
-
-
                     {
-                        "description": "Change fn + h/j/k/l to alt-Arrows",
+                        "description": "Discord Jump Down Server",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$",
-                                            "^com\\.hnc\\.Discord$",
-                                            "^org\\.mozilla\\.firefox$"
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1377,8 +1880,9 @@
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option",
-                                            "shift"
+                                            "command",
+                                            "shift",
+                                            "control"
                                         ]
                                     }
                                 },
@@ -1386,19 +1890,24 @@
                                     {
                                         "key_code": "down_arrow",
                                         "modifiers": [
-                                            "option"
+                                            "option",
+                                            "command"
                                         ]
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "Discord Jump Up Channel",
+                        "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$",
-                                            "^com\\.hnc\\.Discord$",
-                                            "^org\\.mozilla\\.firefox$"
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1407,7 +1916,8 @@
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option",
+                                            "command",
+                                            "control",
                                             "shift"
                                         ]
                                     }
@@ -1416,7 +1926,8 @@
                                     {
                                         "key_code": "up_arrow",
                                         "modifiers": [
-                                            "option"
+                                            "option",
+                                            "command"
                                         ]
                                     }
                                 ],
@@ -1424,6 +1935,8 @@
                             }
                         ]
                     },
+
+
                     {
                         "description": "Xcode current build",
                         "manipulators": [
@@ -1491,74 +2004,6 @@
                         ]
                     },
 
-                    {
-                        "description": "iterm command J down arrow",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ],
-
-                                        "optional": [
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "iterm command K up arrow",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ],
-
-                                        "optional": [
-                                            "shift"
-                                        ]
-
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
 
                     {
                         "description": "iterm vim move to split H",
@@ -1577,9 +2022,39 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "h",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                     
+                    {
+                        "description": "iterm vim move to split H 2",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
                                         ],
-
-                                        "optional": [
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
                                             "shift"
                                         ]
                                     }
@@ -1610,14 +2085,78 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
                                             "command"
-                                        ],
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "l",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
 
-                                        "optional": [
-                                            "shift"
+                    {
+                        "description": "iterm vim move to split L 2",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift" 
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "l",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "iterm vim move to split L 3",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift" 
                                         ]
                                     }
                                 },
@@ -1802,32 +2341,108 @@
                         ]
                     },
 
-{
-                        "description": "iterm vim shift space to alt-t for toggle term 1",
+                    {
+                      "description": "enter 33",
+                      "manipulators": [
+                        {
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$"
+                              ],
+                              "type": "frontmost_application_unless"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "escape",
+                            "modifiers": {
+                              "mandatory": [
+                                "command"
+                              ]
+                            }
+                          },
+                          "to": [
+                            {
+                              "key_code": "return_or_enter"
+                            }
+                          ],
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                      "description": "enter 44",
+                      "manipulators": [
+                        {
+                          "from": {
+                            "key_code": "j",
+                            "modifiers": {
+                              "mandatory": [
+                                "control",
+                                "command"
+                              ]
+                            }
+                          },
+                          "to": [
+                            {
+                              "key_code": "return_or_enter"
+                            }
+                          ],
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+
+                    {
+                      "description": "iterm vim shift space to alt-t for toggle term 1",
+                      "manipulators": [
+                        {
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "escape",
+                            "modifiers": {
+                              "mandatory": [
+                                "command"
+                              ]
+                            }
+                          },
+                          "to": [
+                            {
+                              "key_code": "b",
+                              "modifiers": [
+                                "option"
+                              ]
+                            }
+                          ],
+                          "type": "basic"
+                        }
+                      ]
+                    },
+                    {
+                        "description": "fullscreen",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
                                 "from": {
-                                    "key_code": "escape",
+                                    "key_code": "spacebar",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "option",
+                                            "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "b",
-                                        "modifiers": [
-                                            "option"
-                                        ]
+                                        "key_code": "return_or_enter"
                                     }
                                 ],
                                 "type": "basic"
@@ -1835,38 +2450,6 @@
                         ]
                     },
 
-                    {
-                        "description": "iterm vim shift space to alt-t for toggle term 2",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "b",
-                                        "modifiers": [
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
 
                     {
                         "description": "iterm vim shift space to alt-t for toggle term",
@@ -2117,38 +2700,6 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "z",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "iterm suspend window",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
                                         ]
                                     }
                                 },
@@ -2717,39 +3268,6 @@
                     },
 
                     {
-                        "description": "iterm tmux move tab right 2",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "close_bracket",
-                                        "modifiers": [
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
                         "description": "iterm tmux move tab right 3",
                         "manipulators": [
                             {
@@ -2765,7 +3283,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option",
+                                            "command",
                                             "shift"
                                         ]
                                     }
@@ -2773,39 +3291,6 @@
                                 "to": [
                                     {
                                         "key_code": "close_bracket",
-                                        "modifiers": [
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "iterm tmux move tab left 2",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "open_bracket",
                                         "modifiers": [
                                             "option"
                                         ]
@@ -2832,7 +3317,7 @@
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option",
+                                            "command",
                                             "shift"
                                         ]
                                     }
@@ -2919,26 +3404,22 @@
                         ]
                     },
 
+
                     {
-                        "description": "fullscreen",
+                        "description": "disable command k",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "return_or_enter",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
-                                            "shift"
+                                            "command"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f",
-                                        "modifiers": [
-                                            "control",
-                                            "command"
-                                        ]
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -2946,6 +3427,27 @@
                         ]
                     },
 
+                    {
+                        "description": "command j to enter",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
 
                     {
                         "description": "move splits iterm",
@@ -3243,6 +3745,27 @@
             },
             "selected": true,
             "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "delete_or_backspace"
+                    },
+                    "to": [
+                        {
+                            "key_code": "vk_none"
+                        }
+                    ]
+                },
+
+                {
+                    "from": {
+                        "key_code": "return_or_enter"
+                    },
+                    "to": [
+                        {
+                            "key_code": "vk_none"
+                        }
+                    ]
+                },
                 {
                     "from": {
                         "key_code": "caps_lock"
