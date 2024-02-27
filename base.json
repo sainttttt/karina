@@ -1334,6 +1334,58 @@
                           },
 
                           {
+                            "conditions": [
+                              {
+                                "bundle_identifiers": [
+                                  "^com\\.googlecode\\.iterm2$"
+                                ],
+                                "type": "frontmost_application_if"
+                              }
+                            ],
+                            "from": {
+                              "key_code": "j",
+                              "modifiers": {
+                                "mandatory": [
+                                  "command",
+                                  "shift"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "key_code": "down_arrow"
+                              }
+                            ],
+                            "type": "basic"
+                          },
+
+                          {
+                            "conditions": [
+                              {
+                                "bundle_identifiers": [
+                                  "^com\\.googlecode\\.iterm2$"
+                                ],
+                                "type": "frontmost_application_if"
+                              }
+                            ],
+                            "from": {
+                              "key_code": "k",
+                              "modifiers": {
+                                "mandatory": [
+                                  "command",
+                                  "shift"
+                                ]
+                              }
+                            },
+                            "to": [
+                              {
+                                "key_code": "up_arrow"
+                              }
+                            ],
+                            "type": "basic"
+                          },
+
+                          {
 
                             "conditions": [
                               {
@@ -3136,40 +3188,6 @@
                     },
 
                     {
-                        "description": "iterm vim move to split L 3",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift" 
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "l",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
                         "description": "iterm vim move split position H",
                         "manipulators": [
                             {
@@ -3369,29 +3387,6 @@
                       ]
                     },
 
-                    {
-                      "description": "enter 44",
-                      "manipulators": [
-                        {
-                          "from": {
-                            "key_code": "j",
-                            "modifiers": {
-                              "mandatory": [
-                                "control",
-                                "command"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "return_or_enter"
-                            }
-                          ],
-                          "type": "basic"
-                        }
-                      ]
-                    },
-
 
                     {
                       "description": "iterm vim shift space to alt-t for toggle term 1",
@@ -3427,7 +3422,7 @@
                     },
 
                     {
-                        "description": "dropdown",
+                        "description": "another enter",
                         "manipulators": [
                             {
                                 "from": {
@@ -3440,7 +3435,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f1"
+                                        "key_code": "return_or_enter"
                                     }
                                 ],
                                 "type": "basic"
@@ -3450,6 +3445,33 @@
 
                     {
                         "description": "fullscreen",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f",
+                                        "modifiers": [
+                                            "command",
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "dropdown",
                         "manipulators": [
                             {
                                 "from": {
@@ -3463,11 +3485,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f",
-                                        "modifiers": [
-                                            "command",
-                                            "control"
-                                        ]
+                                        "key_code": "f1"
                                     }
                                 ],
                                 "type": "basic"
