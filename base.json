@@ -535,11 +535,11 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "h",
+                                    "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
                                             "command",
-                                            "control"
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -563,11 +563,11 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "i",
                                     "modifiers": {
                                         "mandatory": [
                                             "command",
-                                            "control"
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -695,7 +695,6 @@
                         ]
                     },
 
-
                     { "description": "command space to backspace",
                         "manipulators": [
                             {
@@ -725,7 +724,12 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "tab"
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
 
                                 "to": {
@@ -921,7 +925,7 @@
                           "to": {
                             "key_code": "v",
                             "modifiers": [
-                              "control"
+                              "option"
                             ]
 
                           },
@@ -1092,9 +1096,32 @@
                         ]
                     },
 
+                    {
+                        "description": "option esc to control",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                    "key_code": "left_control"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+
 
                     {
-                        "description": "ctrl n to command n new",
+                        "description": "option n to command n new",
                         "manipulators": [
                             {
 
@@ -1110,7 +1137,7 @@
                                     "key_code": "n",
                                     "modifiers": {
                                         "mandatory": [
-                                            "control"
+                                            "option"
                                         ]
                                     }
                                 },
@@ -1211,39 +1238,6 @@
                         ]
                     },
 
-                    {
-                        "description": "iterm disable command-o",
-                        "manipulators": [
-                          {
-                            "conditions": [
-                              {
-                                "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$"
-                                ],
-                                "type": "frontmost_application_if"
-                              }
-                            ],
-                            "from": {
-                              "key_code": "o",
-                              "modifiers": {
-                                "mandatory": [
-                                  "command"
-                                ],
-                                "optional": [
-                                  "shift"
-                                ]
-                              }
-                            },
-                            "to": [
-                              {
-                                "key_code": "vk_none"
-                              }
-                            ],
-                            "type": "basic"
-                          }
-
-                        ]
-                    },
 
                     {
                         "description": "disable command h hide",
@@ -3007,7 +3001,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "c",
+                                        "key_code": "z",
                                         "modifiers": [
                                             "control"
                                         ]
@@ -3041,7 +3035,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "z",
+                                        "key_code": "c",
                                         "modifiers": [
                                             "control"
                                         ]
@@ -3052,6 +3046,167 @@
                         ]
                     },
 
+                    {
+                        "description": "iterm option f to control d",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "d",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "iterm command o to control o",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "o",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "iterm command p to control p",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "p",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "iterm disable control d",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "iterm command g to option g",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "g",
+                                        "modifiers": [
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
 
                     {
                         "description": "iterm vim move to split H",
@@ -3435,7 +3590,10 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "return_or_enter"
+                                        "key_code": "return_or_enter",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
