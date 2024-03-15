@@ -777,7 +777,11 @@
                           },
 
                           "to": {
-                            "key_code": "vk_none"
+                            "key_code": "m",
+                            "modifiers": [
+                              "option"
+                            ]
+
                           },
                           "type": "basic"
                         }
@@ -1110,7 +1114,10 @@
                                 },
                                 "to": [
                                     {
-                                    "key_code": "left_control"
+                                    "key_code": "a",
+                                    "modifiers": [
+                                      "option"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -1118,6 +1125,39 @@
                         ]
                     },
 
+
+                    {
+                        "description": "disable command shift semi colon in iterm",
+                        "manipulators": [
+                            {
+
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                    "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+
+                        ]
+                    },
 
 
                     {
@@ -2519,32 +2559,6 @@
                         ]
                     },
 
-                    {
-                        "description": "command-shift-z remap to option/alt",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "z",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                  {
-                                    "key_code": "z",
-                                    "modifiers": [
-                                      "shift",
-                                      "option"
-                                    ]
-                                  }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
 
                     {
                         "description": "Switch to Finder 2",
@@ -3884,38 +3898,7 @@
                             }
                         ]
                     },
-                    {
-                        "description": "iterm suspend window",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "z",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "z",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
+
                     {
                         "description": "iterm vim close window ",
                         "manipulators": [
