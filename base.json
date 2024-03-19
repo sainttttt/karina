@@ -777,6 +777,23 @@
                           },
 
                           "to": {
+                            "key_code": "vk_none"
+                          },
+                          "type": "basic"
+                        },
+
+                        {
+
+                          "from": {
+                            "key_code": "k",
+                            "modifiers": {
+                              "mandatory": [
+                                "command"
+                              ]
+                            }
+                          },
+
+                          "to": {
                             "key_code": "m",
                             "modifiers": [
                               "option"
@@ -879,7 +896,6 @@
                         },
 
                         {
-
                           "conditions": [
                             {
                               "bundle_identifiers": [
@@ -892,7 +908,8 @@
                             "key_code": "w",
                             "modifiers": {
                               "mandatory": [
-                                "control"
+                                "command",
+                                "option"
                               ]
                             }
                           },
@@ -959,6 +976,41 @@
                             "key_code": "r",
                             "modifiers": [
                               "control"
+                            ]
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                      "description": "iterm vim command-c yank",
+                      "manipulators": [
+                        {
+
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "c",
+
+                            "modifiers": {
+                              "mandatory": [
+                                "command"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "y",
+                            "modifiers": [
+                              "shift"
                             ]
 
                           },
@@ -1246,7 +1298,8 @@
                             "conditions": [
                               {
                                 "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$"
+                                  "^com\\.googlecode\\.iterm2$",
+                                  "com.neovide.neovide"
                                 ],
                                 "type": "frontmost_application_unless"
                               }
@@ -2563,7 +2616,8 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "x",
+
+                                    "key_code": "grave_accent_and_tilde",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift",
@@ -3194,7 +3248,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "com.neovide.neovide"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3455,43 +3510,6 @@
                     },
 
                     {
-                        "description": "iterm vim Run",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "option"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator'"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
                       "description": "enter 33",
                       "manipulators": [
                         {
@@ -3514,6 +3532,69 @@
                           "to": [
                             {
                               "key_code": "return_or_enter"
+                            }
+                          ],
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                      "description": "iterm vim snippet thing",
+                      "manipulators": [
+                        {
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "n",
+                            "modifiers": {
+                              "mandatory": [
+                                "option"
+                              ]
+                            }
+                          },
+                          "to": [
+                            {
+                              "key_code": "b",
+                              "modifiers": [
+                                "option"
+                              ]
+                            }
+                          ],
+                          "type": "basic"
+                        },
+
+                        {
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "n",
+                            "modifiers": {
+                              "mandatory": [
+                                "option",
+                                "shift"
+                              ]
+                            }
+                          },
+                          "to": [
+                            {
+                              "key_code": "b",
+                              "modifiers": [
+                                "option",
+                                "shift"
+                              ]
                             }
                           ],
                           "type": "basic"
@@ -3544,7 +3625,7 @@
                           },
                           "to": [
                             {
-                              "key_code": "b",
+                              "key_code": "c",
                               "modifiers": [
                                 "option"
                               ]
