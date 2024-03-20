@@ -1498,6 +1498,28 @@
                           },
 
                           {
+                              "from": {
+                                  "key_code": "right_shift",
+                                  "modifiers": {
+                                      "mandatory": [
+                                          "command",
+                                          "option"
+                                      ]
+                                  }
+                              },
+                              "to": [
+                                  {
+                                      "key_code": "l",
+                                      "modifiers": [
+                                          "command",
+                                          "option"
+                                      ]
+                                  }
+                              ],
+                              "type": "basic"
+                          },
+
+                          {
                             "conditions": [
                               {
                                 "bundle_identifiers": [
@@ -3275,39 +3297,6 @@
                         ]
                     },
                      
-                    {
-                        "description": "iterm vim move to split H 2",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "h",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
 
                     {
                         "description": "iterm vim move to split L",
@@ -3342,39 +3331,6 @@
                         ]
                     },
 
-                    {
-                        "description": "iterm vim move to split L 2",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift" 
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "l",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
 
                     {
                         "description": "iterm vim move split position H",
@@ -3399,7 +3355,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "n",
+                                        "key_code": "comma",
                                         "modifiers": [
                                             "option"
                                         ]
