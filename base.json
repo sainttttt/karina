@@ -529,7 +529,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "com.neovide.neovide"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -557,7 +558,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "com.neovide.neovide"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -983,6 +985,7 @@
                         }
                       ]
                     },
+
 
                     {
                       "description": "iterm vim command-c yank",
@@ -3296,7 +3299,7 @@
                             }
                         ]
                     },
-                     
+
 
                     {
                         "description": "iterm vim move to split L",
@@ -3793,7 +3796,7 @@
                                     {
                                         "key_code": "u",
                                         "modifiers": [
-                                            "option"
+                                            "control"
                                         ]
                                     }
                                 ],
