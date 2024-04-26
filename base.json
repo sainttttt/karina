@@ -17,8 +17,107 @@
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
+
                     {
-                        "description": "Assign Swap Slot 1 ",
+                        "description": "fromA - Switch to Whale",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift",
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
+                                    {
+                                        "shell_command": "open -a '/Applications/Whale.app'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromA - zsh iTerm macros",
+                        "manipulators": [
+                            {
+
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.googlecode.iterm2"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+
+                                "to": {
+                                    "key_code": "a",
+                                    "modifiers": [
+                                        "control"
+                                    ]
+
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                      "description": "fromC - iterm vim command-c yank",
+                      "manipulators": [
+                        {
+
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com.googlecode.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "c",
+
+                            "modifiers": {
+                              "mandatory": [
+                                "command"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "y",
+                            "modifiers": [
+                              "shift"
+                            ]
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                        "description": "fromD Assign Swap Slot 1 ",
                         "manipulators": [
                             {
                                 "from": {
@@ -43,7 +142,312 @@
                     },
 
                     {
-                        "description": "Assign Swap Slot 2 ",
+                        "description": "fromD Finder delete",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.apple.finder$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [
+                                            "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromD iterm command d to control c",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.googlecode.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "c",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromD iterm disable control d",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.googlecode.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromD Use Command+D to focus address bar in Firefox",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org.mozilla.firefox"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_gui"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "l",
+                                        "modifiers": [
+                                            "left_gui"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                      "description": "fromE - zsh iTerm macros",
+                      "manipulators": [
+                        {
+
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com.googlecode.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "e",
+                            "modifiers": {
+                              "mandatory": [
+                                "command"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "n",
+                            "modifiers": [
+                              "control"
+                            ]
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                      "description": "fromW - zsh iTerm macros",
+                      "manipulators": [
+                        {
+
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com.googlecode.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "w",
+                            "modifiers": {
+                              "mandatory": [
+                                "command"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "w",
+                            "modifiers": [
+                              "option"
+                            ]
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                      "description": "fromW - zsh iTerm macros",
+                      "manipulators": [
+
+                        {
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com.googlecode.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "w",
+                            "modifiers": {
+                              "mandatory": [
+                                "command",
+                                "option"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "w",
+                            "modifiers": [
+                              "command"
+                            ]
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                      "description": "fromS - zsh iTerm macros",
+                      "manipulators": [
+
+                        {
+
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com.googlecode.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "s",
+                            "modifiers": {
+                              "mandatory": [
+                                "command"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "v",
+                            "modifiers": [
+                              "option"
+                            ]
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+
+                    {
+                      "description": "fromR - zsh iTerm macros",
+                      "manipulators": [
+
+                        {
+
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "^com.googlecode.iterm2$"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "r",
+                            "modifiers": {
+                              "mandatory": [
+                                "command"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "r",
+                            "modifiers": [
+                              "control"
+                            ]
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+
+                    {
+                        "description": "fromF Assign Swap Slot 2 ",
                         "manipulators": [
                             {
                                 "from": {
@@ -68,54 +472,17 @@
                     },
 
                     {
-                        "description": "Audacity Record",
+                        "description": "fromJ Discord keyboard reply disable other",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
+                                "conditions": [
                                     {
-                                        "key_code": "3",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/Audacity.app/Contents/MacOS/Audacity'"
-                                    },
-                                    {
-                                      "key_code": "escape",
-                                      "hold_down_milliseconds": 500
-                                    },
-                                    {
-                                      "key_code": "r"
+                                        "bundle_identifiers": [
+                                            "^org.mozilla.firefoxdeveloperedition$"
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
                                 ],
-                                "type": "basic"
-                            }
-
-                        ]
-                    },
-
-                    {
-                        "description": "Discord keyboard reply disable other",
-                        "manipulators": [
-                            {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
@@ -131,13 +498,19 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromU Discord disables",
+                        "manipulators": [
 
                             {
                               "conditions": [
                                 {
                                   "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                    "^org.mozilla.firefoxdeveloperedition$"
                                   ],
                                   "type": "frontmost_application_if"
                                 }
@@ -156,17 +529,22 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
 
+                    {
+                        "description": "fromI Discord disables",
+                        "manipulators": [
                             {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org.mozilla.firefoxdeveloperedition$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
@@ -181,13 +559,18 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
 
+                    {
+                        "description": "fromO Discord disables",
+                        "manipulators": [
                             {
                               "conditions": [
                                 {
                                   "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                    "^org.mozilla.firefoxdeveloperedition$"
                                   ],
                                   "type": "frontmost_application_if"
                                 }
@@ -206,17 +589,22 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
 
+                    {
+                        "description": "fromO Discord disables",
+                        "manipulators": [
                             {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org.mozilla.firefoxdeveloperedition$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": {
@@ -236,13 +624,13 @@
                     },
 
                     {
-                        "description": "Discord keyboard reply",
+                        "description": "fromK Discord keyboard reply",
                         "manipulators": [
                             {
                               "conditions": [
                                 {
                                   "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                    "^org.mozilla.firefoxdeveloperedition$"
                                   ],
                                   "type": "frontmost_application_if"
                                 }
@@ -287,7 +675,7 @@
                               "conditions": [
                                 {
                                   "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                    "^org.mozilla.firefoxdeveloperedition$"
                                   ],
                                   "type": "frontmost_application_if"
                                 }
@@ -312,7 +700,7 @@
                               "conditions": [
                                 {
                                   "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                    "^org.mozilla.firefoxdeveloperedition$"
                                   ],
                                   "type": "frontmost_application_if"
                                 }
@@ -337,7 +725,7 @@
                               "conditions": [
                                 {
                                   "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                    "^org.mozilla.firefoxdeveloperedition$"
                                   ],
                                   "type": "frontmost_application_if"
                                 }
@@ -362,7 +750,7 @@
                               "conditions": [
                                 {
                                   "bundle_identifiers": [
-                                    "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                    "^org.mozilla.firefoxdeveloperedition$"
                                   ],
                                   "type": "frontmost_application_if"
                                 }
@@ -392,7 +780,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -420,7 +808,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -448,7 +836,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -473,7 +861,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -500,7 +888,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -529,7 +917,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com.googlecode.iterm2$",
                                             "com.neovide.neovide"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -558,7 +946,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com.googlecode.iterm2$",
                                             "com.neovide.neovide"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -586,7 +974,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -613,7 +1001,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -642,7 +1030,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -670,7 +1058,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -785,239 +1173,33 @@
                         },
 
                         {
+                            "conditions": [
+                                {
+                                    "bundle_identifiers": [
+                                        "com.googlecode.iterm2",
+                                        "com.neovide.neovide"
+                                    ],
+                                    "type": "frontmost_application_if"
+                                }
+                            ],
 
-                          "from": {
-                            "key_code": "k",
-                            "modifiers": {
-                              "mandatory": [
-                                "command"
-                              ]
-                            }
-                          },
+                            "from": {
+                                "key_code": "k",
+                                "modifiers": {
+                                    "mandatory": [
+                                        "command"
+                                    ]
+                                }
+                            },
 
-                          "to": {
-                            "key_code": "m",
-                            "modifiers": [
-                              "option"
-                            ]
+                            "to": {
+                                "key_code": "m",
+                                "modifiers": [
+                                    "option"
+                                ]
 
-                          },
-                          "type": "basic"
-                        }
-                      ]
-                    },
-
-                    {
-                      "description": "zsh iTerm macros",
-                      "manipulators": [
-                        {
-
-                          "conditions": [
-                            {
-                              "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
-                              ],
-                              "type": "frontmost_application_if"
-                            }
-                          ],
-                          "from": {
-                            "key_code": "a",
-                            "modifiers": {
-                              "mandatory": [
-                                "command"
-                              ]
-                            }
-                          },
-
-                          "to": {
-                            "key_code": "a",
-                            "modifiers": [
-                              "control"
-                            ]
-
-                          },
-                          "type": "basic"
-                        },
-
-                        {
-
-                          "conditions": [
-                            {
-                              "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
-                              ],
-                              "type": "frontmost_application_if"
-                            }
-                          ],
-                          "from": {
-                            "key_code": "e",
-                            "modifiers": {
-                              "mandatory": [
-                                "command"
-                              ]
-                            }
-                          },
-
-                          "to": {
-                            "key_code": "n",
-                            "modifiers": [
-                              "control"
-                            ]
-
-                          },
-                          "type": "basic"
-                        },
-
-                        {
-
-                          "conditions": [
-                            {
-                              "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
-                              ],
-                              "type": "frontmost_application_if"
-                            }
-                          ],
-                          "from": {
-                            "key_code": "w",
-                            "modifiers": {
-                              "mandatory": [
-                                "command"
-                              ]
-                            }
-                          },
-
-                          "to": {
-                            "key_code": "w",
-                            "modifiers": [
-                              "option"
-                            ]
-
-                          },
-                          "type": "basic"
-                        },
-
-                        {
-                          "conditions": [
-                            {
-                              "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
-                              ],
-                              "type": "frontmost_application_if"
-                            }
-                          ],
-                          "from": {
-                            "key_code": "w",
-                            "modifiers": {
-                              "mandatory": [
-                                "command",
-                                "option"
-                              ]
-                            }
-                          },
-
-                          "to": {
-                            "key_code": "w",
-                            "modifiers": [
-                              "command"
-                            ]
-
-                          },
-                          "type": "basic"
-                        },
-
-                        {
-
-                          "conditions": [
-                            {
-                              "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
-                              ],
-                              "type": "frontmost_application_if"
-                            }
-                          ],
-                          "from": {
-                            "key_code": "s",
-                            "modifiers": {
-                              "mandatory": [
-                                "command"
-                              ]
-                            }
-                          },
-
-                          "to": {
-                            "key_code": "v",
-                            "modifiers": [
-                              "option"
-                            ]
-
-                          },
-                          "type": "basic"
-                        },
-
-                        {
-
-                          "conditions": [
-                            {
-                              "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
-                              ],
-                              "type": "frontmost_application_if"
-                            }
-                          ],
-                          "from": {
-                            "key_code": "r",
-                            "modifiers": {
-                              "mandatory": [
-                                "command"
-                              ]
-                            }
-                          },
-
-                          "to": {
-                            "key_code": "r",
-                            "modifiers": [
-                              "control"
-                            ]
-
-                          },
-                          "type": "basic"
-                        }
-                      ]
-                    },
-
-
-                    {
-                      "description": "iterm vim command-c yank",
-                      "manipulators": [
-                        {
-
-                          "conditions": [
-                            {
-                              "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
-                              ],
-                              "type": "frontmost_application_if"
-                            }
-                          ],
-                          "from": {
-                            "key_code": "c",
-
-                            "modifiers": {
-                              "mandatory": [
-                                "command"
-                              ]
-                            }
-                          },
-
-                          "to": {
-                            "key_code": "y",
-                            "modifiers": [
-                              "shift"
-                            ]
-
-                          },
-                          "type": "basic"
+                            },
+                            "type": "basic"
                         }
                       ]
                     },
@@ -1030,7 +1212,7 @@
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_unless"
                             }
@@ -1064,7 +1246,7 @@
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_if"
                             }
@@ -1149,7 +1331,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1183,7 +1365,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1268,7 +1450,7 @@
                             "conditions": [
                               {
                                 "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$"
+                                  "^com.googlecode.iterm2$"
                                 ],
                                 "type": "frontmost_application_if"
                               }
@@ -1301,7 +1483,7 @@
                             "conditions": [
                               {
                                 "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$",
+                                  "^com.googlecode.iterm2$",
                                   "com.neovide.neovide"
                                 ],
                                 "type": "frontmost_application_unless"
@@ -1361,7 +1543,7 @@
                             "conditions": [
                               {
                                 "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$"
+                                  "^com.googlecode.iterm2$"
                                 ],
                                 "type": "frontmost_application_if"
                               }
@@ -1390,7 +1572,7 @@
                             "conditions": [
                               {
                                 "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$"
+                                  "^com.googlecode.iterm2$"
                                 ],
                                 "type": "frontmost_application_if"
                               }
@@ -1416,7 +1598,7 @@
                             "conditions": [
                               {
                                 "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$"
+                                  "^com.googlecode.iterm2$"
                                 ],
                                 "type": "frontmost_application_if"
                               }
@@ -1443,7 +1625,7 @@
                             "conditions": [
                               {
                                 "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$"
+                                  "^com.googlecode.iterm2$"
                                 ],
                                 "type": "frontmost_application_if"
                               }
@@ -1472,7 +1654,7 @@
                             "conditions": [
                               {
                                 "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$"
+                                  "^com.googlecode.iterm2$"
                                 ],
                                 "type": "frontmost_application_if"
                               }
@@ -1526,7 +1708,7 @@
                             "conditions": [
                               {
                                 "bundle_identifiers": [
-                                  "^com\\.googlecode\\.iterm2$"
+                                  "^com.googlecode.iterm2$"
                                 ],
                                 "type": "frontmost_application_if"
                               }
@@ -1560,14 +1742,6 @@
                         "description": "Change Option + h/j/k/l to Arrows",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
@@ -1585,14 +1759,6 @@
                             },
 
                             {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
@@ -1928,9 +2094,9 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$",
-                                            "^com\\.naver\\.Whale$",
-                                            "^org\\.mozilla\\.firefox$"
+                                            "^com.apple.Safari$",
+                                            "^com.naver.Whale$",
+                                            "^org.mozilla.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1966,7 +2132,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefox$"
+                                            "^org.mozilla.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2003,9 +2169,9 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$",
-                                            "^com\\.naver\\.Whale$",
-                                            "^org\\.mozilla\\.firefox$"
+                                            "^com.apple.Safari$",
+                                            "^com.naver.Whale$",
+                                            "^org.mozilla.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2040,7 +2206,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^net\\.sourceforge\\.fontforge$"
+                                            "^net.sourceforge.fontforge$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2074,7 +2240,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.finder$"
+                                            "^com.apple.finder$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2328,7 +2494,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.finder$"
+                                            "^com.apple.finder$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2356,31 +2522,35 @@
                     },
 
                     {
-                        "description": "Finder delete",
+                        "description": "fromX - browsers inspect toggle last",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.finder$"
+                                            "com.apple.Safari",
+                                            "com.naver.Whale",
+                                            "org.mozilla.firefox",
+                                            "com.google.Chrome",
+                                            "org.mozilla.firefoxdeveloperedition"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "d",
+                                    "key_code": "x",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
-                                            "control"
+                                            "option"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "delete_or_backspace",
+                                        "key_code": "i",
                                         "modifiers": [
-                                            "command"
+                                            "command",
+                                            "option"
                                         ]
                                     }
                                 ],
@@ -2389,16 +2559,56 @@
                         ]
                     },
 
-
-
                     {
-                        "description": "Switch to Desktop Finder",
+                        "description": "fromC - browsers inspect",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.finder$"
+                                            "com.apple.Safari",
+                                            "com.naver.Whale",
+                                            "org.mozilla.firefox",
+                                            "com.google.Chrome",
+                                            "org.mozilla.firefoxdeveloperedition"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "c",
+                                        "modifiers": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromR - force reload browsers",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.apple.Safari",
+                                            "com.naver.Whale",
+                                            "org.mozilla.firefox",
+                                            "com.google.Chrome",
+                                            "org.mozilla.firefoxdeveloperedition"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2407,8 +2617,41 @@
                                     "key_code": "r",
                                     "modifiers": {
                                         "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "r",
+                                        "modifiers": [
                                             "command",
                                             "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromD - Switch to Desktop Finder",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.apple.finder$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
                                         ]
                                     }
                                 },
@@ -2427,40 +2670,11 @@
                     },
 
                     {
-                        "description": "Switch to Whale",
+                        "description": "fromX - Switch to Messages",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "a",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "1",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/Whale.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Switch to Messages",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "q",
+                                    "key_code": "x",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift",
@@ -2483,12 +2697,13 @@
                             }
                         ]
                     },
+
                     {
-                        "description": "Switch to Telegram",
+                        "description": "fromQ - Switch to Telegram Swift",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "w",
+                                    "key_code": "q",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift",
@@ -2511,12 +2726,42 @@
                             }
                         ]
                     },
+
                     {
-                        "description": "Switch to Mail",
+                        "description": "fromW - Switch to Telegram Desktop",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "e",
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift",
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
+                                    {
+                                        "shell_command": "open -a '/Applications/TG.app/Contents/MacOS/Telegram'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromC - Switch to Mail",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "c",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift",
@@ -2541,11 +2786,11 @@
                     },
 
                     {
-                        "description": "Switch to Neovide",
+                        "description": "fromW - Switch to Neovide",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "w",
+                                    "key_code": "e",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift",
@@ -2572,11 +2817,11 @@
 
 
                     {
-                        "description": "Switch to Firefox Dev",
+                        "description": "fromW - Switch to Firefox Dev",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "e",
+                                    "key_code": "w",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift",
@@ -2602,13 +2847,158 @@
                         ]
                     },
 
+                    {
+                        "description": "fromX - Switch to Spotify ",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift",
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
+                                    {
+                                        "shell_command": "open -a '/Applications/Spotify.app/Contents/MacOS/Spotify'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
 
                     {
-                        "description": "Switch to Finder 2",
+                        "description": "fromC - Switch to Brave ",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift",
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
+                                    {
+                                        "shell_command": "open -a '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromV - Switch to Chrome ",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift",
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
+                                    {
+                                        "shell_command": "open -a '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromE - Switch to alacritty ",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift",
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
+                                    {
+                                        "shell_command": "open -a '/Applications/Alacritty.app/Contents/MacOS/alacritty'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromQ - Switch to Halloy ",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "q",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift",
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    },
+                                    {
+                                        "shell_command": "open -a '/Applications/Halloy.app/Contents/MacOS/halloy'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+
+                    {
+                        "description": "fromV - Switch to Finder",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "v",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift",
@@ -2632,10 +3022,10 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$",
-                                            "^com\\.naver\\.Whale$",
-                                            "^com\\.hnc\\.Discord$",
-                                            "^org\\.mozilla\\.firefox$"
+                                            "com.apple.Safari",
+                                            "com.naver.Whale",
+                                            "com.brave.Browser",
+                                            "org.mozilla.firefox"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2671,13 +3061,13 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                            "^org.mozilla.firefoxdeveloperedition$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "n",
                                     "modifiers": {
                                         "mandatory": [
                                             "option",
@@ -2705,7 +3095,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                            "^org.mozilla.firefoxdeveloperedition$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2740,7 +3130,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                            "^org.mozilla.firefoxdeveloperedition$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2776,7 +3166,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                            "^org.mozilla.firefoxdeveloperedition$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2810,7 +3200,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                            "^org.mozilla.firefoxdeveloperedition$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2844,7 +3234,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                            "^org.mozilla.firefoxdeveloperedition$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2880,7 +3270,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefoxdeveloperedition$"
+                                            "^org.mozilla.firefoxdeveloperedition$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -2911,22 +3301,15 @@
 
 
                     {
-                        "description": "Xcode current build",
+                        "description": "control command R to command shift R",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.apple.dt.Xcode"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option"
+                                            "command",
+                                            "control"
                                         ]
                                     }
                                 },
@@ -2936,39 +3319,6 @@
                                         "modifiers": [
                                             "command",
                                             "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Xcode run",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.apple.dt.Xcode"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "command"
                                         ]
                                     }
                                 ],
@@ -2984,7 +3334,7 @@
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_if"
                             }
@@ -3014,7 +3364,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3044,7 +3394,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3071,38 +3421,6 @@
                     },
 
 
-                    {
-                        "description": "iterm command d to control c",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "c",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
 
                     {
                         "description": "iterm option f to control d",
@@ -3111,7 +3429,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3144,7 +3462,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3177,7 +3495,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3204,43 +3522,13 @@
                     },
 
                     {
-                        "description": "iterm disable control d",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
                         "description": "iterm command g to option g",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3273,7 +3561,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com.googlecode.iterm2$",
                                             "com.neovide.neovide"
                                         ],
                                         "type": "frontmost_application_if"
@@ -3308,7 +3596,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3342,7 +3630,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3375,7 +3663,7 @@
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_if"
                             }
@@ -3408,7 +3696,7 @@
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_if"
                             }
@@ -3441,7 +3729,7 @@
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_if"
                             }
@@ -3475,7 +3763,7 @@
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_unless"
                             }
@@ -3505,7 +3793,7 @@
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_if"
                             }
@@ -3533,7 +3821,7 @@
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_if"
                             }
@@ -3561,15 +3849,14 @@
                       ]
                     },
 
-
                     {
-                      "description": "iterm vim shift space to alt-t for toggle term 1",
+                      "description": "iterm vim escape command to toggle term (option c)",
                       "manipulators": [
                         {
                           "conditions": [
                             {
                               "bundle_identifiers": [
-                                "^com\\.googlecode\\.iterm2$"
+                                "^com.googlecode.iterm2$"
                               ],
                               "type": "frontmost_application_if"
                             }
@@ -3670,6 +3957,36 @@
                         ]
                     },
 
+                    {
+                        "description": "fromB - iterm right arrow",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.googlecode.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
 
                     {
                         "description": "iterm vim shift space to alt-t for toggle term",
@@ -3678,7 +3995,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3705,13 +4022,13 @@
                     },
 
                     {
-                        "description": "iterm vim command/option i",
+                        "description": "fromI - iterm vim command/option i",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3720,7 +4037,8 @@
                                     "key_code": "i",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "option",
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -3738,13 +4056,13 @@
                     },
 
                     {
-                        "description": "iterm vim second yank",
+                        "description": "fromY - iterm vim second yank",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3773,13 +4091,13 @@
 
 
                     {
-                        "description": "iterm vim command/option u",
+                        "description": "fromU - iterm vim command/option u",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3788,7 +4106,8 @@
                                     "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "option",
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -3811,7 +4130,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3843,7 +4162,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3878,7 +4197,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3911,7 +4230,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3943,7 +4262,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -3976,7 +4295,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4011,7 +4330,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4044,7 +4363,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4079,7 +4398,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4112,7 +4431,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4144,7 +4463,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4176,7 +4495,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4208,7 +4527,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4240,7 +4559,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4272,7 +4591,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4304,7 +4623,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4336,7 +4655,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4368,7 +4687,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4400,7 +4719,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4434,7 +4753,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4468,7 +4787,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4504,7 +4823,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4537,7 +4856,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4616,7 +4935,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com.googlecode.iterm2$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -4636,38 +4955,6 @@
                                         "modifiers": [
                                             "option",
                                             "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Use Command+D to focus address bar in Firefox",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_gui"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "l",
-                                        "modifiers": [
-                                            "left_gui"
                                         ]
                                     }
                                 ],
