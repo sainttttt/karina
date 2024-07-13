@@ -1,6 +1,7 @@
-karamake: karamake.nim karamake2.nim
+karamake: karamake.nim
 	nim c karamake.nim
-	nim c karamake2.nim
 
-install:
-	cp karamake karamake2 *.json ~/bin/karamake/
+install: karamake
+	rm -rf ~/bin/karamake/ext
+	cp -r ext karamake base.json ~/bin/karamake/
+	~/bin/karamake/karamake

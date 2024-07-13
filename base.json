@@ -48,6 +48,40 @@
                     },
 
                     {
+                        "description": "iterm vim semicolon  shift command",
+                        "manipulators": [
+                            {
+
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.googlecode.iterm2"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+
+                                "to": {
+                                    "key_code": "semicolon",
+                                    "modifiers": [
+                                        "shift"
+                                    ]
+
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
                         "description": "fromA - zsh iTerm macros",
                         "manipulators": [
                             {
@@ -79,6 +113,72 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+
+                    {
+                      "description": "fromP - command shift p disable iterm",
+                      "manipulators": [
+                        {
+
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "com.googlecode.iterm2"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "p",
+
+                            "modifiers": {
+                              "mandatory": [
+                                "command",
+                                "shift"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "vk_none"
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
+                    },
+
+                    {
+                      "description": "fromO - command shift o disable iterm",
+                      "manipulators": [
+                        {
+
+                          "conditions": [
+                            {
+                              "bundle_identifiers": [
+                                "com.googlecode.iterm2"
+                              ],
+                              "type": "frontmost_application_if"
+                            }
+                          ],
+                          "from": {
+                            "key_code": "o",
+
+                            "modifiers": {
+                              "mandatory": [
+                                "command",
+                                "shift"
+                              ]
+                            }
+                          },
+
+                          "to": {
+                            "key_code": "vk_none"
+
+                          },
+                          "type": "basic"
+                        }
+                      ]
                     },
 
                     {
@@ -131,7 +231,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/Users/saint/bin/karamake/karamake2 d"
+                                        "shell_command": "/Users/saint/bin/karamake/karamake d"
                                     }
 
                                 ],
@@ -142,7 +242,100 @@
                     },
 
                     {
+                        "description": "fromS Finder disable",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.apple.finder$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromf Finder disable option",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.apple.finder$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
                         "description": "fromD Finder delete",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.apple.finder$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [
+                                            "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromD Finder delete 2",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -569,7 +762,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/Users/saint/bin/karamake/karamake2 f"
+                                        "shell_command": "/Users/saint/bin/karamake/karamake f"
                                     }
 
                                 ],
@@ -578,309 +771,6 @@
 
                         ]
                     },
-
-                    {
-                        "description": "fromJ Discord keyboard reply disable other",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "fromU Discord disables",
-                        "manipulators": [
-
-                            {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org.mozilla.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "fromI Discord disables",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "fromO Discord disables",
-                        "manipulators": [
-                            {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org.mozilla.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "fromO Discord disables",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "fromK Discord keyboard reply",
-                        "manipulators": [
-                            {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org.mozilla.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "a"
-                                    },
-                                    {
-                                        "key_code": "a",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    },
-                                    {
-                                      "key_code": "escape",
-                                      "hold_down_milliseconds": 200
-                                    },
-                                    {
-                                        "key_code": "delete_or_backspace"
-                                    },
-                                    {
-                                      "key_code": "tab"
-                                    },
-                                    {
-                                      "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-
-                            {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org.mozilla.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-
-                            {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org.mozilla.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-
-                            {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org.mozilla.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-
-                            {
-                              "conditions": [
-                                {
-                                  "bundle_identifiers": [
-                                    "^org.mozilla.firefoxdeveloperedition$"
-                                  ],
-                                  "type": "frontmost_application_if"
-                                }
-                              ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
 
                     { "description": "Move Tabs HL",
                         "manipulators": [
@@ -1475,32 +1365,6 @@
                     },
 
                     {
-                        "description": "show hide dock",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "tab",
-
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": {
-                                  "key_code": "d",
-                                  "modifiers": [
-                                    "command",
-                                    "option"
-                                  ]
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
                         "description": "fromU iterm vim",
                         "manipulators": [
                             {
@@ -1721,37 +1585,6 @@
                     },
 
 
-                    {
-                        "description": "fromO - iterm disable command-shift-o",
-                        "manipulators": [
-                          {
-                            "conditions": [
-                              {
-                                "bundle_identifiers": [
-                                  "com.googlecode.iterm2"
-                                ],
-                                "type": "frontmost_application_if"
-                              }
-                            ],
-                            "from": {
-                              "key_code": "o",
-                              "modifiers": {
-                                "mandatory": [
-                                  "command",
-                                  "shift"
-                                ]
-                              }
-                            },
-                            "to": [
-                              {
-                                "key_code": "vk_none"
-                              }
-                            ],
-                            "type": "basic"
-                          }
-
-                        ]
-                    },
 
                     {
                         "description": "fromU - iterm disable command u",
@@ -1805,9 +1638,14 @@
                               }
                             },
                             "to": [
-                              {
-                                "key_code": "vk_none"
-                              }
+                                {
+                                    "key_code": "x",
+                                    "modifiers": [
+                                        "option",
+                                        "shift"
+                                    ]
+
+                                }
                             ],
                             "type": "basic"
                           }
@@ -2238,6 +2076,34 @@
                             }
                         ]
                     },
+
+                    {
+                        "description": "Record Screen",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift",
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "5",
+                                        "modifiers": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
 
                     {
                         "description": "Switch to terminal",
@@ -3580,219 +3446,6 @@
                     },
 
                     {
-                        "description": "Space move left",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Space move right",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Switch to 1 Space ",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "1",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "1",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Switch to 2 Space",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "2",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "2",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Switch to 3 Space ",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "3",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "3",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Switch to 4 Space Cancel",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "4",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Switch to 4 Space ",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "4",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "f18"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Switch to (Fullscreen) Next 4 Space ",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "right_shift",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "4",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                      "key_code": "escape",
-                                      "hold_down_milliseconds": 300
-                                    },
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
                         "description": "Finder new",
                         "manipulators": [
                             {
@@ -3805,11 +3458,10 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "x",
+                                    "key_code": "q",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command",
-                                            "shift"
+                                            "command"
                                         ]
                                     }
                                 },
@@ -3942,7 +3594,129 @@
                     },
 
                     {
-                        "description": "fromD - Switch to Desktop Finder",
+                        "description": "volume stuff",
+                        "manipulators": [
+                            {
+
+                                "from": {
+                                    "key_code": "f1"
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "display_brightness_decrement"
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f2"
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "display_brightness_increment"
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f3"
+                                },
+                                "to": [
+                                    {
+                                        "apple_vendor_keyboard_key_code": "mission_control"
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f4"
+                                },
+                                "to": [
+                                    {
+                                        "apple_vendor_keyboard_key_code": "spotlight"
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f5"
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "dictation"
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f6"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f6"
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f8"
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "rewind"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f9"
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "play_or_pause"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f10"
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "fast_forward"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f11"
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "mute"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f12"
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "volume_decrement"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "fromQ - Switch to Desktop Finder",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -3954,10 +3728,10 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "d",
+                                    "key_code": "q",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "option"
                                         ]
                                     }
                                 },
@@ -3970,6 +3744,94 @@
                                         ]
                                     }
                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "telegram macro hugging",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "ru.keepcoder.Telegram"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+
+                                    "to"  	:[
+                                        {"shell_command":"osascript -e 'set temp to the clipboard \n set the clipboard to \":hugging\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.1 \n end tell \n set the clipboard to temp'"},
+
+                                    {
+                                      "key_code": "vk_none",
+                                      "hold_down_milliseconds": 600
+                                    },
+                                    { "key_code": "right_arrow" },
+
+                                    { "key_code": "return_or_enter" },
+                                    {
+                                      "key_code": "vk_none",
+                                      "hold_down_milliseconds": 600
+                                    },
+                                    { "key_code": "down_arrow" },
+
+                                    { "key_code": "return_or_enter" }
+                                    ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "telegram macro hearteyes",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "ru.keepcoder.Telegram"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+
+                                    "to"  	:[
+                                        {"shell_command":"osascript -e 'set temp to the clipboard \n set the clipboard to \":hearteyes\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.1 \n end tell \n set the clipboard to temp'"},
+
+                                    {
+                                      "key_code": "vk_none",
+                                      "hold_down_milliseconds": 600
+                                    },
+                                    { "key_code": "right_arrow" },
+
+                                    { "key_code": "return_or_enter" },
+                                    {
+                                      "key_code": "vk_none",
+                                      "hold_down_milliseconds": 600
+                                    },
+                                    { "key_code": "down_arrow" },
+
+                                    { "key_code": "return_or_enter" }
+                                    ],
                                 "type": "basic"
                             }
                         ]
@@ -4003,6 +3865,7 @@
                             }
                         ]
                     },
+
 
                     {
                         "description": "fromE - Switch to Telegram Swift",
@@ -4092,73 +3955,11 @@
                     },
 
                     {
-                        "description": "fromW - Switch to Neovide",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "2",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/Neovide.app/Contents/MacOS/neovide'"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-
-                        ]
-                    },
-
-
-                    {
-                        "description": "fromE - Switch to Firefox Dev",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "2",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-
-                                        "shell_command": "open -a '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-
-                        ]
-                    },
-
-                    {
                         "description": "fromX - Switch to Spotify ",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "x",
+                                    "key_code": "c",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift",
@@ -4168,7 +3969,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "3",
+                                        "key_code": "4",
                                         "modifiers": [
                                             "control"
                                         ]
@@ -4187,7 +3988,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "x",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift",
@@ -4226,7 +4027,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "3",
+                                        "key_code": "4",
                                         "modifiers": [
                                             "control"
                                         ]
@@ -4270,34 +4071,6 @@
                         ]
                     },
 
-                    {
-                        "description": "fromR - Switch to Halloy ",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "2",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/Halloy.app/Contents/MacOS/halloy'"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
 
                     {
                         "description": "fromV - Switch to Firefox",
@@ -4314,7 +4087,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "3",
+                                        "key_code": "5",
                                         "modifiers": [
                                             "control"
                                         ]
@@ -4381,321 +4154,6 @@
                                         "key_code": "s",
                                         "modifiers": [
                                             "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "fromN - Discord Quick Jump",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "k",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Discord Jump Up",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": [
-                                            "command",
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Discord Jump Down",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": [
-                                            "command",
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Discord Jump Down Channel",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": [
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Discord Jump Up Channel",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": [
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Discord Jump Down Server",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": [
-                                            "option",
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Discord Jump Up Server",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": [
-                                            "option",
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Discord Jump Down Server Unread",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": [
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Discord Jump Up Channel Unread",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefoxdeveloperedition$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": [
-                                            "option",
                                             "shift"
                                         ]
                                     }
@@ -4829,7 +4287,7 @@
 
 
                     {
-                        "description": "iterm option f to control d",
+                        "description": "iterm option d to control d",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -4841,7 +4299,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f",
+                                    "key_code": "d",
                                     "modifiers": {
                                         "mandatory": [
                                             "option"
@@ -5705,39 +5163,6 @@
                         ]
                     },
                     {
-                        "description": "iterm vim close window 2",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "w",
-                                        "modifiers": [
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "iterm tmux rearrange win left ",
                         "manipulators": [
                             {
@@ -5761,7 +5186,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_arrow",
+                                        "key_code": "right_arrow",
                                         "modifiers": [
                                             "shift",
                                             "control"
@@ -5772,39 +5197,7 @@
                             }
                         ]
                     },
-                    {
-                        "description": "iterm close native tab",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "w",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
+
                     {
                         "description": "iterm tmux rearrange win left",
                         "manipulators": [

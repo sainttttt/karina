@@ -1,0 +1,27 @@
+[
+  {
+    "description": "show hide dock",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "tab",
+
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "d",
+          "modifiers": [
+            "command",
+            "option"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  }
+]

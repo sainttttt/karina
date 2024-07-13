@@ -1,0 +1,202 @@
+[
+  {
+    "description": "Switch to 1 Space ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "1",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+
+          {
+            "shell_command": "echo 'switch to space 1' > ~/foo.txt"
+          },
+          {
+            "key_code": "1",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "echo '' > ~/foo.txt"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Switch to 2 Space",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "2",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "control"
+            ]
+          }
+
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+  {
+    "description": "Switch to 3 Space ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "3",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "3",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  {
+    "description": "Switch to 4 Space ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "4",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "4",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Switch to 5 5pace Cancel",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "5",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "5",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Switch to 6 Space ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "slash",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "6",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  {
+    "description": "Switch to (Fullscreen) Next 4 Space ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "right_shift",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "6",
+            "modifiers": [
+              "control"
+                                        ]
+          },
+          {
+            "key_code": "escape",
+            "hold_down_milliseconds": 300
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  }
+]
