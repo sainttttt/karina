@@ -115,71 +115,6 @@
                         ]
                     },
 
-                    {
-                      "description": "fromP - command shift p disable iterm",
-                      "manipulators": [
-                        {
-
-                          "conditions": [
-                            {
-                              "bundle_identifiers": [
-                                "com.googlecode.iterm2"
-                              ],
-                              "type": "frontmost_application_if"
-                            }
-                          ],
-                          "from": {
-                            "key_code": "p",
-
-                            "modifiers": {
-                              "mandatory": [
-                                "command",
-                                "shift"
-                              ]
-                            }
-                          },
-
-                          "to": {
-                            "key_code": "vk_none"
-
-                          },
-                          "type": "basic"
-                        }
-                      ]
-                    },
-
-                    {
-                      "description": "fromO - command shift o disable iterm",
-                      "manipulators": [
-                        {
-
-                          "conditions": [
-                            {
-                              "bundle_identifiers": [
-                                "com.googlecode.iterm2"
-                              ],
-                              "type": "frontmost_application_if"
-                            }
-                          ],
-                          "from": {
-                            "key_code": "o",
-
-                            "modifiers": {
-                              "mandatory": [
-                                "command",
-                                "shift"
-                              ]
-                            }
-                          },
-
-                          "to": {
-                            "key_code": "vk_none"
-
-                          },
-                          "type": "basic"
-                        }
-                      ]
-                    },
 
                     {
                       "description": "fromC - iterm vim command-c yank",
@@ -231,7 +166,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/Users/saint/bin/karamake/karamake d"
+                                        "shell_command": "/Users/saint/.config/karabiner/karamake d"
                                     }
 
                                 ],
@@ -762,7 +697,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/Users/saint/bin/karamake/karamake f"
+                                        "shell_command": "/Users/saint/.config/karabiner/karamake f"
                                     }
 
                                 ],
@@ -1364,38 +1299,6 @@
                         ]
                     },
 
-                    {
-                        "description": "fromU iterm vim",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                    "key_code": "u",
-                                    "modifiers": [
-                                      "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
 
                     {
                         "description": "tmux copy mode",
@@ -1583,76 +1486,6 @@
 
                         ]
                     },
-
-
-
-                    {
-                        "description": "fromU - iterm disable command u",
-                        "manipulators": [
-                          {
-                            "conditions": [
-                              {
-                                "bundle_identifiers": [
-                                  "com.googlecode.iterm2"
-                                ],
-                                "type": "frontmost_application_if"
-                              }
-                            ],
-                            "from": {
-                              "key_code": "u",
-                              "modifiers": {
-                                "mandatory": [
-                                  "command"
-                                ]
-                              }
-                            },
-                            "to": [
-                              {
-                                "key_code": "vk_none"
-                              }
-                            ],
-                            "type": "basic"
-                          }
-
-                        ]
-                    },
-
-                    {
-                        "description": "fromI - iterm disable command i",
-                        "manipulators": [
-                          {
-                            "conditions": [
-                              {
-                                "bundle_identifiers": [
-                                  "com.googlecode.iterm2"
-                                ],
-                                "type": "frontmost_application_if"
-                              }
-                            ],
-                            "from": {
-                              "key_code": "i",
-                              "modifiers": {
-                                "mandatory": [
-                                  "command"
-                                ]
-                              }
-                            },
-                            "to": [
-                                {
-                                    "key_code": "x",
-                                    "modifiers": [
-                                        "option",
-                                        "shift"
-                                    ]
-
-                                }
-                            ],
-                            "type": "basic"
-                          }
-
-                        ]
-                    },
-
 
                     {
                         "description": "disable command h hide",
@@ -1931,124 +1764,7 @@
                         ]
                     },
 
-                    {
-                        "description": "Audacity Stop",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "3",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    },
-                                    {
-                                        "shell_command": "open -a '/Applications/Audacity.app/Contents/MacOS/Audacity'"
-                                    },
-                                    {
-                                      "key_code": "escape",
-                                      "hold_down_milliseconds": 500
-                                    },
-                                    {
-                                      "key_code": "spacebar"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
 
-                        ]
-                    },
-
-
-
-                    {
-                        "description": "Swap to Xcode",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/Users/saint/bin/karamake/karamake xcode"
-                                    },
-                                    {
-                                        "key_code": "f18"
-                                    }
-
-                                ],
-                                "type": "basic"
-                            }
-
-                        ]
-                    },
-                    {
-                        "description": "Swap to Brave",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/Users/saint/bin/karamake/karamake brave"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-
-                        ]
-                    },
-                    {
-                        "description": "Swap to Chrome",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option",
-                                            "shift",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/Users/saint/bin/karamake/karamake chrome"
-                                    },
-                                    {
-                                        "key_code": "f17"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-
-                        ]
-                    },
 
                     {
                         "description": "Screenshot",
@@ -4319,105 +4035,6 @@
                         ]
                     },
 
-                    {
-                        "description": "iterm command o to control o",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "o",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "iterm command p to control p",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "iterm command shift p to control p",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
 
                     {
                         "description": "iterm command g to option g",

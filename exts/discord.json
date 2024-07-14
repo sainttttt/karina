@@ -5,10 +5,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "^org.mozilla.firefoxdeveloperedition",
-              "org.chromium.Chromium"
-            ],
+            "bundle_identifiers": "##discord",
             "type": "frontmost_application_if"
           }
         ],
@@ -40,10 +37,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "^org.mozilla.firefoxdeveloperedition",
-              "org.chromium.Chromium"
-            ],
+            "bundle_identifiers": "##discord",
             "type": "frontmost_application_if"
           }
         ],
@@ -77,10 +71,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "^org.mozilla.firefoxdeveloperedition",
-              "org.chromium.Chromium"
-            ],
+            "bundle_identifiers": "##discord",
             "type": "frontmost_application_if"
           }
         ],
@@ -114,10 +105,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "^org.mozilla.firefoxdeveloperedition",
-              "org.chromium.Chromium"
-            ],
+            "bundle_identifiers": "##discord",
             "type": "frontmost_application_if"
           }
         ],
@@ -150,10 +138,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "^org.mozilla.firefoxdeveloperedition",
-              "org.chromium.Chromium"
-            ],
+            "bundle_identifiers": "##discord",
             "type": "frontmost_application_if"
           }
         ],
@@ -186,10 +171,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "^org.mozilla.firefoxdeveloperedition",
-              "org.chromium.Chromium"
-            ],
+            "bundle_identifiers": "##discord",
             "type": "frontmost_application_if"
           }
         ],
@@ -486,10 +468,8 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "^org.mozilla.firefoxdeveloperedition$",
-              "org.chromium.Chromium"
-            ],
+            "bundle_identifiers": "##discord"
+            ,
             "type": "frontmost_application_if"
           }
         ],

@@ -1,0 +1,134 @@
+[
+  {
+    "description": "parens open",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "o",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "9",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+  {
+    "description": "parens closed",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "p",
+
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "0",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+  {
+    "description": "brace open",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "u",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "open_bracket",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+  {
+    "description": "brace closed",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "i",
+
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "close_bracket",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "bracket open",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "u",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "open_bracket"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+  {
+    "description": "bracket close",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "i",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "close_bracket"
+        },
+        "type": "basic"
+      }
+    ]
+  }
+
+]

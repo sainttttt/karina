@@ -3,6 +3,7 @@ import std/[json, streams, os, strformat, osproc, strutils]
 import os
 import print
 import glob
+import regex
 
 
 var baseJsonFile = getAppDir() & "/base.json"
@@ -11,15 +12,17 @@ var baseSwapJsonFile = getAppDir() & "/swap-base.json"
 var outFile = "~/.config/karabiner/karabiner.json"
 
 
+proc jsonSub(m: RegexMatch2, s: string): string =
+  let f = s[m.group(0)]
+  result = readFile(getAppDir() & "/subs/" & fmt"{f}.json")
+
 proc genKaraJson(write = false): JsonNode =
   var baseJson = parseJson(openFileStream(baseJsonFile))
-  for path in walkGlob(getAppDir() & "/ext/*.json"):
+  for path in walkGlob(getAppDir() & "/exts/*.json"):
     let extRules = parseJson(openFileStream(path))
     for r in extRules:
-
-      # let parsedRule = $r.replace("\"#", paramStr(1))
-      baseJson["profiles"][0]["complex_modifications"]["rules"]
-      .add(r)
+      let repJson = parseJson(($r).replace(re2""""##(\w+)"""", jsonSub))
+      baseJson["profiles"][0]["complex_modifications"]["rules"].add(repJson)
 
   for path in walkGlob("~/.config/karabiner/*-swap.json".expandTilde):
     baseJson["profiles"][0]["complex_modifications"]["rules"]
