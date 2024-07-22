@@ -1,0 +1,100 @@
+  {
+    "description": "parens open",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "9",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+
+{
+  "description": "fromU - iterm vim cmd shift U to opt 7",
+  "manipulators": [
+  {
+    "conditions": [
+    {
+      "bundle_identifiers": [
+        "com.googlecode.iterm2"
+      ],
+      "type": "frontmost_application_if"
+    }
+    ],
+    "from": {
+      "key_code": "u",
+      "modifiers": {
+        "mandatory": [
+          "command",
+        "shift"
+        ]
+      }
+    },
+    "to": [
+    {
+      "key_code": "7",
+      "modifiers": [
+        "option",
+      "shift"
+      ]
+    }
+    ],
+    "type": "basic"
+  }
+  ]
+},
+
+{
+  "description": "fromI - iterm vim cmd shift I to opt shift 8",
+  "manipulators": [
+  {
+    "conditions": [
+    {
+      "bundle_identifiers": [
+        "com.googlecode.iterm2"
+      ],
+      "type": "frontmost_application_if"
+    }
+    ],
+    "from": {
+      "key_code": "i",
+      "modifiers": {
+        "mandatory": [
+          "command",
+        "shift"
+        ]
+      }
+    },
+    "to": [
+    {
+      "key_code": "8",
+      "modifiers": [
+        "option",
+      "shift"
+      ]
+    }
+    ],
+    "type": "basic"
+  }
+  ]
+},
+
+
+<M-&>
+
+  waht are
+var a
