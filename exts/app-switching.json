@@ -36,7 +36,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "e",
+          "key_code": "r",
           "modifiers": {
             "mandatory": [
               "shift",
@@ -70,7 +70,7 @@
           "modifiers": {
             "mandatory": [
               "shift",
-              "command"
+              "option"
             ]
           }
         },
@@ -96,11 +96,11 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "r",
+          "key_code": "e",
           "modifiers": {
             "mandatory": [
               "shift",
-              "option"
+              "command"
             ]
           }
         },
@@ -113,6 +113,240 @@
           },
           {
             "shell_command": "open -a '/Applications/Halloy.app/Contents/MacOS/halloy'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromX - Switch to Messages",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "x",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/System/Applications/Messages.app/Contents/MacOS/Messages'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  {
+    "description": "fromE - Switch to Telegram Swift",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "e",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/Applications/Telegram.app/Contents/MacOS/Telegram'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromQ - Switch to Telegram Desktop",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "q",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/Applications/TG.app/Contents/MacOS/Telegram'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromC - Switch to Mail",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "c",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/System/Applications/Mail.app/Contents/MacOS/Mail'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromX - Switch to Deezer ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "c",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "4",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/Applications/Deezer.app/Contents/MacOS/Deezer'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromC - Switch to Brave ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "x",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "3",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromV - Switch to mpv ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "v",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "4",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+
+            "shell_command": "open -a '/Applications/mpv.app/'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromW - Switch to alacritty ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "w",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/Applications/Alacritty.app/Contents/MacOS/alacritty'"
           }
         ],
         "type": "basic"

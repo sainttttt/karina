@@ -70,6 +70,28 @@
   },
 
   {
+    "description": "zero",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "0",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "hyphen",
     "manipulators": [
       {
