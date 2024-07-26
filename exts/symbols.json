@@ -76,6 +76,45 @@
   },
 
   {
+    "description": "backslash",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "8",
+          "modifiers": {
+            "mandatory": "##level2symbol"
+          }
+        },
+        "to": {
+          "key_code": "backslash"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "pipe",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "9",
+          "modifiers": {
+            "mandatory": "##level3symbol"
+          }
+        },
+        "to": {
+          "key_code": "backslash",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "plus",
     "manipulators": [
       {
@@ -206,10 +245,7 @@
         "from": {
           "key_code": "8",
           "modifiers": {
-            "mandatory": [
-              "shift",
-              "option"
-            ]
+            "mandatory": "##level3symbol"
           }
         },
         "to": {
@@ -217,6 +253,27 @@
           "modifiers": [
             "shift"
           ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "slash ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "9",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "slash"
         },
         "type": "basic"
       }

@@ -48,6 +48,50 @@
   },
 
   {
+    "description": "backslash",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "backslash",
+          "modifiers": {
+            "optional": [
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "semicolon",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "semicolon",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "period",
     "manipulators": [
       {
