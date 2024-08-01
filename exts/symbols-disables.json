@@ -113,6 +113,8 @@
     ]
   },
 
+
+
   {
     "description": "zero",
     "manipulators": [
@@ -121,7 +123,59 @@
           "key_code": "0",
           "modifiers": {
             "mandatory": [
-              "command"
+              "shift"
+            ],
+            "optional": [
+              "command",
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "7",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "7",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ],
+            "optional": [
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "7",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "7",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
             ]
           }
         },

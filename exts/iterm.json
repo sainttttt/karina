@@ -1,0 +1,36 @@
+[
+  {
+    "description": "fromv - remap control v option v",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.googlecode.iterm2",
+              "com.neovide.neovide"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+
+        "from": {
+          "key_code": "v",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+
+        "to": {
+          "key_code": "v",
+          "modifiers": [
+            "control"
+          ]
+
+        },
+        "type": "basic"
+      }
+    ]
+  }
+]

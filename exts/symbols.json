@@ -41,7 +41,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "9",
+          "key_code": "8",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -80,7 +80,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "8",
+          "key_code": "9",
           "modifiers": {
             "mandatory": "##level2symbol"
           }
@@ -153,26 +153,6 @@
           "modifiers": [
             "shift"
           ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "slash",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "0",
-          "modifiers": {
-            "mandatory": [
-              "shift"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "slash"
         },
         "type": "basic"
       }
@@ -264,7 +244,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "9",
+          "key_code": "8",
           "modifiers": {
             "mandatory": [
               "shift",
@@ -285,7 +265,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "8",
+          "key_code": "9",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
