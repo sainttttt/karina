@@ -17,6 +17,50 @@
     ]
   },
 
+  {
+    "description": "exclamation 2",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "0",
+          "modifiers": {
+            "mandatory": [
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "1",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "exclamation",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "semicolon",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "1",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
 
   {
     "description": "comma",

@@ -1,0 +1,8 @@
+[
+  "org.chromium.Chromium",
+  "com.apple.Safari",
+  "com.naver.Whale",
+  "^org.mozilla.firefox*",
+  "com.brave.Browser",
+  "com.google.Chrome"
+]

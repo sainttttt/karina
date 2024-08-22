@@ -1,35 +1,4 @@
 [
-  {
-    "description": "Discord Jump Up Channel",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": "##discord",
-            "type": "frontmost_application_if"
-          }
-        ],
-        "from": {
-          "key_code": "y",
-          "modifiers": {
-            "mandatory": [
-              "command",
-              "shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "up_arrow",
-            "modifiers": [
-              "option"
-            ]
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
 
   {
     "description": "Inbox",
@@ -141,6 +110,70 @@
   },
 
   {
+    "description": "Discord Jump Up Channel",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##discord",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "comma",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Discord Jump Down Channel",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##discord",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "down_arrow",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "Discord Jump Down Server Unread",
     "manipulators": [
       {
@@ -151,10 +184,110 @@
           }
         ],
         "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "down_arrow",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Discord Jump Down Channel Unread",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##discord",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "j"
+        },
+        "to": [
+          {
+            "key_code": "down_arrow",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Discord Jump Down Channel Unread",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##discord",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 2
+          }
+        ],
+        "from": {
+          "key_code": "j"
+        },
+        "to": [
+          {
+            "key_code": "down_arrow",
+            "modifiers": [
+              "option",
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Discord Jump Down Channel Unread",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##discord",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+        "from": {
           "key_code": "j",
           "modifiers": {
             "mandatory": [
-              "option",
               "command"
             ]
           }
@@ -181,14 +314,50 @@
           {
             "bundle_identifiers": "##discord",
             "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
           }
         ],
         "from": {
           "key_code": "k",
           "modifiers": {
             "mandatory": [
-              "option",
               "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Discord Jump Up Channel Unread",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##discord",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "comma",
+          "modifiers": {
+            "mandatory": [
+              "option"
             ]
           }
         },
@@ -441,14 +610,18 @@
             "key_code": "a"
           },
           {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 300
+          },
+          {
             "key_code": "a",
             "modifiers": [
               "command"
             ]
           },
           {
-            "key_code": "escape",
-            "hold_down_milliseconds": 200
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 300
           },
           {
             "key_code": "delete_or_backspace"

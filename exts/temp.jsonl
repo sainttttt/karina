@@ -1,3 +1,56 @@
+{ "description": "q nav layer mod",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "p"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  }
+
+                    {
+                        "description": "center eligius time 2",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "escape",
+
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+
+                                "to": {
+                                  "key_code": "equal_sign",
+                                  "modifiers": [
+                                    "command",
+                                    "option"
+                                  ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
   {
     "description": "parens open",
     "manipulators": [

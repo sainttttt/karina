@@ -1,0 +1,58 @@
+[
+  { "description": "alternate shift a",
+    "manipulators": [
+      {
+
+        "from": {
+          "key_code": "a",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+
+        "to": {
+          "key_code": "a",
+          "modifiers": [
+            "shift"
+          ]
+
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "vim tree browser show",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          }
+        ],
+
+        "from": {
+          "key_code": "a",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+
+        "to": {
+          "key_code": "a",
+          "modifiers": [
+            "control"
+          ]
+
+        },
+        "type": "basic"
+      }
+    ]
+  }
+]

@@ -25,29 +25,6 @@
 
 
   {
-    "description": "equals",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "open_bracket",
-          "modifiers": {
-            "optional": [
-              "shift",
-              "option"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "vk_none"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
     "description": "backslash",
     "manipulators": [
       {
@@ -70,14 +47,14 @@
   },
 
   {
-    "description": "semicolon",
+    "description": "exclamation",
     "manipulators": [
       {
         "from": {
-          "key_code": "semicolon",
+          "key_code": "1",
           "modifiers": {
             "mandatory": [
-              "option"
+              "shift"
             ]
           }
         },
@@ -123,10 +100,30 @@
           "key_code": "0",
           "modifiers": {
             "mandatory": [
-              "shift"
-            ],
-            "optional": [
-              "command",
+              "shift",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "zero 2",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "0",
+          "modifiers": {
+            "mandatory": [
+              "shift",
               "option"
             ]
           }
@@ -175,6 +172,89 @@
           "modifiers": {
             "mandatory": [
               "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "open_bracket",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "open_bracket",
+          "modifiers": {
+            "mandatory": [
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "open_bracket",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "open_bracket",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "open_bracket",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "open_bracket"
+        },
+        "to": [
+          {
+            "key_code": "right_shift"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "hyphen",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "hyphen",
+          "modifiers": {
+            "mandatory": [
               "shift"
             ]
           }
@@ -196,8 +276,7 @@
         "from": {
           "key_code": "hyphen",
           "modifiers": {
-            "optional": [
-              "shift",
+            "mandatory": [
               "option"
             ]
           }
@@ -211,6 +290,24 @@
       }
     ]
   },
+
+  {
+    "description": "hyphen",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "hyphen"
+        },
+        "to": [
+          {
+            "key_code": "right_shift"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
 
   {
     "description": "equals",

@@ -1,0 +1,184 @@
+[
+  { "description": "esc nav layer mod",
+    "manipulators": [
+      {
+        "conditions": [],
+        "from": {
+          "key_code": "escape",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+
+        "to_after_key_up": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 0
+            }
+          }
+        ],
+
+        "to": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 1
+            }
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "center eligius time 2",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "escape",
+
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+
+        "to_after_key_up": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 0
+            }
+          }
+        ],
+
+        "to": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 4
+            }
+          }
+        ],
+
+        "to_if_alone": {
+          "key_code": "equal_sign",
+          "modifiers": [
+            "command",
+            "option"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "q nav layer mod",
+    "manipulators": [
+      {
+        "conditions": [],
+        "from": {
+          "key_code": "q",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to_after_key_up": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 0
+            }
+          }
+        ],
+
+        "to": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 2
+            }
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "quit command q replacement",
+    "manipulators": [
+      {
+        "conditions": [],
+        "from": {
+          "key_code": "q",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "q",
+          "modifiers": [
+            "command"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "alternate shift q",
+    "manipulators": [
+      {
+
+        "from": {
+          "key_code": "q",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+
+        "to_after_key_up": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 0
+            }
+          }
+        ],
+
+        "to": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 3
+            }
+          }
+        ],
+
+        "to_if_alone": {
+          "key_code": "q",
+          "modifiers": [
+            "shift"
+          ]
+        },
+
+        "type": "basic"
+      }
+    ]
+  }
+
+
+
+]

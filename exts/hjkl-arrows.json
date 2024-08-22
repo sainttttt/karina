@@ -1,0 +1,225 @@
+[
+  {
+    "description": "Change Option + h/j/k/l to Arrows",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "option"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow"
+          }
+        ],
+        "type": "basic"
+      },
+
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "option"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow"
+          }
+        ],
+        "type": "basic"
+      },
+
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "option"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "down_arrow"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "option"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Change Option + h/j/k/l to Arrows",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "option"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "down_arrow",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "option"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  }
+]

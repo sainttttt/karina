@@ -370,7 +370,7 @@
   },
 
   {
-    "description": "fromX - Switch to Deezer ",
+    "description": "fromX - Switch to Music Browser ",
     "manipulators": [
       {
         "from": {
@@ -390,7 +390,7 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Deezer.app/Contents/MacOS/Deezer'"
+            "shell_command": "open -a '/Applications/Firefox Nightly.app/Contents/MacOS/firefox'"
           }
         ],
         "type": "basic"

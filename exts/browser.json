@@ -1,10 +1,249 @@
 [
 
-  { "description": "Move Tabs HL",
+  {
+    "description": "command q to command n new",
     "manipulators": [
       {
 
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "q",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "n",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
 
+    ]
+  },
+
+  { "description": "Search text forward command G replacement",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "f",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "g",
+          "modifiers": [
+            "command"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Search text backward command shift G replacement",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "d",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "g",
+          "modifiers": [
+            "command",
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Search text backward command shift G replacement2 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "g",
+          "modifiers": [
+            "command",
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Search text option G disable",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "g",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Search text command G disable",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "g",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Browser Back",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.googlecode.iterm2",
+              "com.neovide.neovide"
+            ],
+            "type": "frontmost_application_unless"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "open_bracket",
+          "modifiers": [
+            "command"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Browser Forward",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.googlecode.iterm2",
+              "com.neovide.neovide"
+            ],
+            "type": "frontmost_application_unless"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "close_bracket",
+          "modifiers": [
+            "command"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Browser Back",
+    "manipulators": [
+      {
         "conditions": [
           {
             "bundle_identifiers": [
@@ -34,7 +273,7 @@
     ]
   },
 
-  { "description": "Move Tabs HL",
+  { "description": "Browser Forward",
     "manipulators": [
 
       {

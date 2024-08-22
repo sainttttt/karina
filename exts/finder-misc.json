@@ -16,7 +16,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -76,7 +76,7 @@
           "modifiers": {
             "mandatory": [
               "command"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -84,7 +84,7 @@
             "key_code": "delete_or_backspace",
             "modifiers": [
               "command"
-                                        ]
+            ]
           }
         ],
         "type": "basic"
@@ -109,7 +109,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -142,7 +142,7 @@
           "modifiers": {
             "mandatory": [
               "command"
-                                        ]
+            ]
           }
         },
         "to": [
