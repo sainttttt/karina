@@ -51,6 +51,40 @@
     ]
   },
 
+  { "description": "switch to reaper",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 4
+          }
+        ],
+        "from": {
+          "key_code": "c",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "4",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/Applications/REAPER.app/Contents/MacOS/REAPER'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
   {
     "description": "Switch to terminal",
     "manipulators": [

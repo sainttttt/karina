@@ -231,7 +231,7 @@
   },
 
   {
-    "description": "open_bracket",
+    "description": "alternate shift",
     "manipulators": [
       {
         "from": {
@@ -239,7 +239,7 @@
         },
         "to": [
           {
-            "key_code": "right_shift"
+            "key_code": "left_shift"
           }
         ],
         "type": "basic"
@@ -382,14 +382,6 @@
     "description": "comma",
     "manipulators": [
       {
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
-            "type": "frontmost_application_if"
-          }
-        ],
         "from": {
           "key_code": "comma",
           "modifiers": {

@@ -524,9 +524,18 @@
                         ]
                     },
 
+
                     { "description": "command space to enter",
                         "manipulators": [
                             {
+
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "nav_layer",
+                                        "value": 0
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "spacebar",
 
@@ -544,6 +553,39 @@
                             }
                         ]
                     },
+
+                    { "description": "alt spotlight",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "nav_layer",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "spacebar",
+
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+
+                                "to": {
+                                  "key_code": "spacebar",
+                                  "modifiers": [
+                                    "command"
+                                  ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+
 
                     {
                         "description": "tab to backspace",
@@ -753,7 +795,27 @@
                         ]
                     },
 
-                   {
+                    {
+                        "description": "alternate enter",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                  "key_code": "spacebar"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
                         "description": "center eligius time",
                         "manipulators": [
                             {
@@ -768,11 +830,11 @@
                                 },
 
                                 "to": {
-                                  "key_code": "equal_sign",
-                                  "modifiers": [
-                                    "command",
-                                    "option"
-                                  ]
+                                    "key_code": "equal_sign",
+                                    "modifiers": [
+                                        "command",
+                                        "option"
+                                    ]
                                 },
                                 "type": "basic"
                             }
@@ -1361,6 +1423,11 @@
                                             "com.deezer.deezer-desktop"
                                         ],
                                         "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "type": "variable_if",
+                                        "name": "nav_layer",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -1926,31 +1993,6 @@
                     },
 
                     {
-                        "description": "another enter",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "return_or_enter",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
                         "description": "fullscreen",
                         "manipulators": [
                             {
@@ -2143,6 +2185,11 @@
                                             "com.googlecode.iterm2"
                                         ],
                                         "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "type": "variable_if",
+                                        "name": "nav_layer",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {

@@ -70,32 +70,6 @@
   },
 
 
-{
-    "description": "iterm vim escape command to toggle term (option c)",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "s",
-          "modifiers": {
-            "mandatory": [
-              "command"
-            ]
-          }
-        },
-
-        "to": [
-          {
-            "key_code": "a",
-            "modifiers": [
-              "command"
-            ]
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
   { "description": "fromD iterm command d to control c",
     "manipulators": [
       {
@@ -785,7 +759,7 @@
     ]
   },
 
-  { "description": "fromC - iterm vim command-c yank",
+  { "description": "toggle term vim",
     "manipulators": [
       {
 

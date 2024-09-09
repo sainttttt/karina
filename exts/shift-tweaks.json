@@ -1,28 +1,4 @@
 [
-  { "description": "alternate shift a",
-    "manipulators": [
-      {
-
-        "from": {
-          "key_code": "a",
-          "modifiers": {
-            "mandatory": [
-              "option"
-            ]
-          }
-        },
-
-        "to": {
-          "key_code": "a",
-          "modifiers": [
-            "shift"
-          ]
-
-        },
-        "type": "basic"
-      }
-    ]
-  },
 
   { "description": "vim tree browser show",
     "manipulators": [

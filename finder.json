@@ -1,6 +1,7 @@
 {
     "description": "Regular key disable Finder",
     "manipulators": [
+
         {
             "conditions": [
                 {
@@ -274,30 +275,6 @@
             "to": [
                 {
                     "key_code": "vk_none"
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "bundle_identifiers": [
-                        "^com.apple.finder$"
-                    ],
-                    "type": "frontmost_application_if"
-                }
-            ],
-            "from": {
-                "key_code": "g",
-                "modifiers": {
-                    "mandatory": [
-                        "shift"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "g"
                 }
             ],
             "type": "basic"
