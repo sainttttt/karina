@@ -169,6 +169,157 @@
     ]
   },
 
+  { "description": "Disable command I - dark mode toggle thing",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "i",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromX - browsers inspect toggle last",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "x",
+          "modifiers": {
+            "mandatory": [
+              "option"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "i",
+            "modifiers": [
+              "command",
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromC - browsers inspect",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "c",
+          "modifiers": {
+            "mandatory": [
+              "option"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "fromR - force reload browsers",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": [
+              "option"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "r",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Disable command shift 0 reset zoom",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "0",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
   { "description": "Browser Back",
     "manipulators": [
       {

@@ -138,53 +138,6 @@
     ]
   },
 
-  {
-    "description": "7",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "7",
-          "modifiers": {
-            "mandatory": [
-              "option"
-            ],
-            "optional": [
-              "shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "vk_none"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "7",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "7",
-          "modifiers": {
-            "mandatory": [
-              "command",
-              "shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "vk_none"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
 
   {
     "description": "open_bracket",
