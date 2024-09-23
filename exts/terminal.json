@@ -69,6 +69,45 @@
     ]
   },
 
+  { "description": "command q to option q",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.googlecode.iterm2"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "q",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+
+        "to": {
+          "key_code": "5",
+          "modifiers": [
+            "option",
+            "shift"
+          ]
+
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
 
   { "description": "fromD iterm command d to control c",
     "manipulators": [
@@ -522,7 +561,7 @@
     ]
   },
 
-{ "description": "q nav layer mod",
+{ "description": "control d",
     "manipulators": [
       {
         "conditions": [
@@ -553,16 +592,10 @@
     ]
   },
 
-  { "description": "back word vim",
+{ "description": "tmux copy mode",
     "manipulators": [
       {
         "conditions": [
-          {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
-            "type": "frontmost_application_if"
-          },
           {
             "type": "variable_if",
             "name": "nav_layer",
@@ -570,7 +603,7 @@
           }
         ],
         "from": {
-          "key_code": "w",
+          "key_code": "f",
           "modifiers": {
             "mandatory": [
               "command"
@@ -579,9 +612,10 @@
         },
         "to": [
           {
-            "key_code": "y",
+            "key_code": "d",
             "modifiers": [
-              "control"
+              "option",
+              "shift"
             ]
           }
         ],
@@ -590,7 +624,7 @@
     ]
   },
 
-  { "description": "back word vim",
+  { "description": "close window vim",
     "manipulators": [
       {
         "conditions": [
@@ -614,19 +648,20 @@
             ]
           }
         },
-        "to": {
-          "key_code": "w",
-          "modifiers": [
-            "option",
-            "shift"
+        "to": [
+          {
+            "key_code": "w",
+            "modifiers": [
+              "option"
             ]
-        },
+          }
+        ],
         "type": "basic"
       }
     ]
   },
 
-  { "description": "back word vim",
+  { "description": "command k disable",
     "manipulators": [
       {
         "conditions": [
@@ -694,18 +729,20 @@
       }
     ]
   },
-  { "description": "close window vim",
+
+  {
+    "description": "iterm command f to control c",
     "manipulators": [
       {
         "conditions": [
           {
-            "type": "variable_if",
-            "name": "nav_layer",
-            "value": 1
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
           }
         ],
+
         "from": {
-          "key_code": "e",
+          "key_code": "c",
           "modifiers": {
             "mandatory": [
               "command"
@@ -714,7 +751,44 @@
         },
         "to": [
           {
-            "key_code": "w",
+            "key_code": "z",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "vim hotfile 1 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+
+        "from": {
+          "key_code": "w",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "1",
             "modifiers": [
               "option",
               "shift"
@@ -727,28 +801,149 @@
   },
 
   {
-    "description": "iterm command f to control c",
+    "description": "vim hotfile 2 ",
     "manipulators": [
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##terminals",
             "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
           }
         ],
+
         "from": {
-          "key_code": "c",
+          "key_code": "e",
           "modifiers": {
             "mandatory": [
               "command"
-                                        ]
+            ]
+          }
+        },
+
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "vim hotfile 3 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
           }
         },
         "to": [
           {
-            "key_code": "z",
+            "key_code": "3",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "renumber tmux panes",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+
+        "to": [
+          {
+            "key_code": "r",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "command r to control r",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+
+        "to": [
+          {
+            "key_code": "r",
             "modifiers": [
               "control"
             ]

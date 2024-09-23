@@ -99,7 +99,7 @@
   },
 
   {
-    "description": "plus",
+    "description": "question 2",
     "manipulators": [
       {
         "from": {
@@ -109,10 +109,49 @@
           }
         },
         "to": {
-          "key_code": "equal_sign",
+          "key_code": "slash",
           "modifiers": [
             "shift"
           ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "percent",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "9",
+          "modifiers": {
+            "mandatory": "##level2symbol"
+          }
+        },
+        "to": {
+          "key_code": "5",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "slash",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "2",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "slash"
         },
         "type": "basic"
       }
@@ -124,9 +163,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "9",
+          "key_code": "3",
           "modifiers": {
-            "mandatory": "##level2symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {
@@ -369,9 +408,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "u",
+          "key_code": "q",
           "modifiers": {
-            "mandatory": "##level2symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {
@@ -390,9 +429,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "i",
+          "key_code": "w",
           "modifiers": {
-            "mandatory": "##level2symbol"
+            "mandatory": "##level1symbol"
 
           }
         },
@@ -414,9 +453,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "o",
+          "key_code": "d",
           "modifiers": {
-            "mandatory": "##level2symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {
@@ -432,9 +471,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "p",
+          "key_code": "f",
           "modifiers": {
-            "mandatory": "##level2symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {
@@ -455,9 +494,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "u",
+          "key_code": "e",
           "modifiers": {
-            "mandatory": "##level3symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {
@@ -476,9 +515,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "i",
+          "key_code": "r",
           "modifiers": {
-            "mandatory": "##level3symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {
@@ -497,9 +536,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "o",
+          "key_code": "a",
           "modifiers": {
-            "mandatory": "##level3symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {
@@ -519,9 +558,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "p",
+          "key_code": "s",
           "modifiers": {
-            "mandatory": "##level3symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {

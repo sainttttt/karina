@@ -1,5 +1,5 @@
 [
-  { "description": "esc nav layer mod",
+  { "description": "esc command nav layer mod",
     "manipulators": [
       {
         "conditions": [],
@@ -35,7 +35,7 @@
   },
 
   {
-    "description": "center eligius time 2",
+    "description": "option esc nav layer mod",
     "manipulators": [
       {
         "from": {
@@ -134,51 +134,6 @@
         "type": "basic"
       }
     ]
-  },
-
-  { "description": "alternate shift q",
-    "manipulators": [
-      {
-
-        "from": {
-          "key_code": "q",
-          "modifiers": {
-            "mandatory": [
-              "option"
-            ]
-          }
-        },
-
-        "to_after_key_up": [
-          {
-            "set_variable": {
-              "name": "nav_layer",
-              "value": 0
-            }
-          }
-        ],
-
-        "to": [
-          {
-            "set_variable": {
-              "name": "nav_layer",
-              "value": 3
-            }
-          }
-        ],
-
-        "to_if_alone": {
-          "key_code": "q",
-          "modifiers": [
-            "shift"
-          ]
-        },
-
-        "type": "basic"
-      }
-    ]
   }
-
-
 
 ]

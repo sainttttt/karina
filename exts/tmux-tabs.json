@@ -1,0 +1,325 @@
+[
+  {
+    "description": "iterm number tab 1 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "1",
+          "modifiers": {
+            "mandatory": [
+              "command"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "1",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "iterm number tab 2 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "2",
+          "modifiers": {
+            "mandatory": [
+              "command"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "iterm number tab 3 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "3",
+          "modifiers": {
+            "mandatory": [
+              "command"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "3",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "iterm number tab 4 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "4",
+          "modifiers": {
+            "mandatory": [
+              "command"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "4",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "iterm number tab 5 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "5",
+          "modifiers": {
+            "mandatory": [
+              "command"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "5",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "iterm number tab 6 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "6",
+          "modifiers": {
+            "mandatory": [
+              "command"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "6",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "iterm number tab 7 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "7",
+          "modifiers": {
+            "mandatory": [
+              "command"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "7",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "iterm number tab 8 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "8",
+          "modifiers": {
+            "mandatory": [
+              "command"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "8",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "iterm number tab 9 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "9",
+          "modifiers": {
+            "mandatory": [
+              "command"
+                                        ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "9",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  }
+]
