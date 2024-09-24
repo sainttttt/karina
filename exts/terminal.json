@@ -1,6 +1,6 @@
 [
   {
-    "description": "fromv - remap control v option v",
+    "description": "fromv - remap control v option m",
     "manipulators": [
       {
         "conditions": [
@@ -11,7 +11,7 @@
         ],
 
         "from": {
-          "key_code": "v",
+          "key_code": "m",
           "modifiers": {
             "mandatory": [
               "option"
@@ -102,6 +102,44 @@
             "shift"
           ]
 
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "ctrl stuff",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.googlecode.iterm2"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "p",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "p",
+          "modifiers": [
+            "control"
+          ]
         },
         "type": "basic"
       }
@@ -363,11 +401,7 @@
         },
         "to": [
           {
-            "key_code": "d",
-            "modifiers": [
-              "option",
-              "shift"
-            ]
+            "key_code": "vk_none"
           }
         ],
         "type": "basic"
@@ -566,6 +600,12 @@
       {
         "conditions": [
           {
+            "bundle_identifiers": [
+              "com.googlecode.iterm2"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
             "type": "variable_if",
             "name": "nav_layer",
             "value": 1
@@ -596,6 +636,10 @@
     "manipulators": [
       {
         "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
           {
             "type": "variable_if",
             "name": "nav_layer",
@@ -763,7 +807,7 @@
   },
 
   {
-    "description": "vim hotfile 1 ",
+    "description": "vim quit",
     "manipulators": [
       {
         "conditions": [
@@ -780,6 +824,44 @@
 
         "from": {
           "key_code": "w",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "9",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "vim hotfile 1 ",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+
+        "from": {
+          "key_code": "2",
           "modifiers": {
             "mandatory": [
               "command"
@@ -817,7 +899,7 @@
         ],
 
         "from": {
-          "key_code": "e",
+          "key_code": "3",
           "modifiers": {
             "mandatory": [
               "command"
@@ -856,7 +938,7 @@
         ],
 
         "from": {
-          "key_code": "r",
+          "key_code": "4",
           "modifiers": {
             "mandatory": [
               "command"

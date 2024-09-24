@@ -4,7 +4,6 @@
     "description": "command q to command n new",
     "manipulators": [
       {
-
         "conditions": [
           {
             "bundle_identifiers": "##browsers",
@@ -33,6 +32,43 @@
     ]
   },
 
+  { "description": "fromD Use Command+D to focus address bar in Firefox",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^org.mozilla.*"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "d",
+          "modifiers": {
+            "mandatory": [
+              "left_gui"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "l",
+            "modifiers": [
+              "left_gui"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
   { "description": "Search text forward command G replacement",
     "manipulators": [
       {
@@ -40,13 +76,18 @@
           {
             "bundle_identifiers": "##browsers",
             "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
           }
         ],
         "from": {
           "key_code": "f",
           "modifiers": {
             "mandatory": [
-              "option"
+              "command"
             ]
           }
         },
@@ -61,46 +102,22 @@
     ]
   },
 
-  { "description": "Search text backward command shift G replacement",
+  { "description": "Search text backwards command G replacement",
     "manipulators": [
       {
         "conditions": [
           {
             "bundle_identifiers": "##browsers",
             "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
           }
         ],
         "from": {
           "key_code": "d",
-          "modifiers": {
-            "mandatory": [
-              "option"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "g",
-          "modifiers": [
-            "command",
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  { "description": "Search text backward command shift G replacement2 ",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": "##browsers",
-            "type": "frontmost_application_if"
-          }
-        ],
-        "from": {
-          "key_code": "k",
           "modifiers": {
             "mandatory": [
               "command"
