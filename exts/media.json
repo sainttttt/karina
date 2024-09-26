@@ -1,0 +1,142 @@
+[
+
+  { "description": "volume down",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 2
+          }
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "consumer_key_code": "volume_decrement"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "play pause",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 2
+          }
+        ],
+        "from": {
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "consumer_key_code": "play_or_pause"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "prev track",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 2
+          }
+        ],
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "consumer_key_code": "rewind"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "next track",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 2
+          }
+        ],
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "consumer_key_code": "fast_forward"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "volume up",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 2
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "consumer_key_code": "volume_increment"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  }
+]

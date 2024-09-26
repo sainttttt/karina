@@ -5,7 +5,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           }
         ],
@@ -37,9 +37,7 @@
 
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -69,45 +67,6 @@
     ]
   },
 
-  { "description": "command q to option q",
-    "manipulators": [
-      {
-
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
-            "type": "frontmost_application_if"
-          },
-          {
-            "type": "variable_if",
-            "name": "nav_layer",
-            "value": 0
-          }
-        ],
-        "from": {
-          "key_code": "q",
-          "modifiers": {
-            "mandatory": [
-              "command"
-            ]
-          }
-        },
-
-        "to": {
-          "key_code": "5",
-          "modifiers": [
-            "option",
-            "shift"
-          ]
-
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
   {
     "description": "ctrl stuff",
     "manipulators": [
@@ -115,9 +74,7 @@
 
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -192,10 +149,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2",
-              "com.neovide.neovide"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -232,10 +186,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2",
-              "com.neovide.neovide"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -271,16 +222,13 @@
       {
         "conditions": [
           {
+            "bundle_identifiers": "##editorsandterms",
+            "type": "frontmost_application_if"
+          },
+          {
             "type": "variable_if",
             "name": "nav_layer",
             "value": 1
-          },
-          {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2",
-              "com.neovide.neovide"
-            ],
-            "type": "frontmost_application_if"
           }
         ],
         "from": {
@@ -342,9 +290,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -380,9 +326,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -410,15 +354,13 @@
   },
 
   {
-    "description": "iterm tmux create new tab",
+    "description": "tmux create new tab",
     "manipulators": [
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
-            "type": "frontmost_application_if"
+          "bundle_identifiers": "##terminals",
+          "type": "frontmost_application_if"
           },
           {
             "type": "variable_if",
@@ -457,9 +399,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
 
@@ -496,9 +436,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
 
@@ -536,9 +474,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           }
         ],
@@ -568,6 +504,10 @@
     "manipulators": [
       {
         "conditions": [
+          {
+            "bundle_identifiers": "##editorsandterms",
+            "type": "frontmost_application_if"
+          },
           {
             "type": "variable_if",
             "name": "nav_layer",
@@ -600,9 +540,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -673,9 +611,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -710,9 +646,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -743,19 +677,17 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##terminals",
             "type": "frontmost_application_if"
           },
           {
             "type": "variable_if",
             "name": "nav_layer",
-            "value": 1
+            "value": 2
           }
         ],
         "from": {
-          "key_code": "c",
+          "key_code": "w",
           "modifiers": {
             "mandatory": [
               "command"
@@ -763,7 +695,7 @@
           }
         },
         "to": {
-            "key_code": "5",
+            "key_code": "9",
             "modifiers": [
               "option",
               "shift"
@@ -780,7 +712,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           }
         ],
@@ -812,7 +744,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -850,7 +782,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -888,7 +820,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -927,7 +859,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -965,7 +897,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -1004,7 +936,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -1042,9 +974,7 @@
 
         "conditions": [
           {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2"
-            ],
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
 

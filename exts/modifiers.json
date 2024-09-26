@@ -107,6 +107,14 @@
             }
           }
         ],
+
+        "to_if_alone": {
+          "key_code": "5",
+          "modifiers": [
+            "option",
+            "shift"
+          ]
+        },
         "type": "basic"
       }
     ]

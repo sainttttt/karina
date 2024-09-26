@@ -400,9 +400,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
-                                        ],
+                                        "bundle_identifiers": "##terminals",
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
