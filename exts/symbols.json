@@ -99,7 +99,7 @@
   },
 
   {
-    "description": "question 2",
+    "description": "underscore",
     "manipulators": [
       {
         "from": {
@@ -109,7 +109,7 @@
           }
         },
         "to": {
-          "key_code": "slash",
+          "key_code": "hyphen",
           "modifiers": [
             "shift"
           ]
@@ -118,6 +118,8 @@
       }
     ]
   },
+
+
 
   {
     "description": "percent",
@@ -177,13 +179,76 @@
   },
 
   {
+    "description": "percent",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "4",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "4",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "caret",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "hyphen",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "6",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "ampersand",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "hyphen",
+          "modifiers": {
+            "mandatory": "##level0symbol"
+          }
+        },
+        "to": {
+          "key_code": "7",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "tilde",
     "manipulators": [
       {
         "from": {
-          "key_code": "7",
+          "key_code": "1",
           "modifiers": {
-            "mandatory": "##level2symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {
@@ -202,9 +267,9 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "7",
+          "key_code": "i",
           "modifiers": {
-            "mandatory": "##level1symbol"
+            "mandatory": "##level3symbol"
           }
         },
         "to": {
@@ -237,13 +302,37 @@
   },
 
   {
+    "description": "question",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "9",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "slash",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  {
     "description": "plus",
     "manipulators": [
       {
         "from": {
-          "key_code": "y",
+          "key_code": "9",
           "modifiers": {
-            "mandatory": "##level1symbol"
+            "mandatory": [
+              "shift"
+            ]
           }
         },
         "to": {
@@ -257,13 +346,12 @@
     ]
   },
 
-
   {
-    "description": "question",
+    "description": "quote",
     "manipulators": [
       {
         "from": {
-          "key_code": "9",
+          "key_code": "8",
           "modifiers": {
             "mandatory": [
               "shift"
@@ -271,10 +359,7 @@
           }
         },
         "to": {
-          "key_code": "slash",
-          "modifiers": [
-            "shift"
-          ]
+          "key_code": "quote"
         },
         "type": "basic"
       }
@@ -314,26 +399,6 @@
           "modifiers": [
             "shift"
           ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "single quote",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "8",
-          "modifiers": {
-            "mandatory": [
-              "shift"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "quote"
         },
         "type": "basic"
       }
@@ -383,27 +448,6 @@
   },
 
   {
-    "description": "underscore",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "9",
-          "modifiers": {
-            "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "hyphen",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
     "description": "parens open",
     "manipulators": [
       {
@@ -437,6 +481,48 @@
         },
         "to": {
           "key_code": "0",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "brace open",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "e",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "open_bracket",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "brace close",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "close_bracket",
           "modifiers": [
             "shift"
           ]
@@ -484,52 +570,6 @@
     ]
   },
 
-
-
-
-
-
-  {
-    "description": "brace open",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "e",
-          "modifiers": {
-            "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "open_bracket",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "bracket close",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "r",
-          "modifiers": {
-            "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "close_bracket",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
 
   {
     "description": "angle open",
@@ -625,6 +665,15 @@
     "description": "ctrl stuff",
     "manipulators": [
       {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
         "from": {
           "key_code": "o",
           "modifiers": {

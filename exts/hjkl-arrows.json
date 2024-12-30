@@ -17,7 +17,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -43,7 +43,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -68,7 +68,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -92,7 +92,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -152,7 +152,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -207,7 +207,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -219,7 +219,62 @@
           }
         ],
         "type": "basic"
+      },
+
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.googlecode.iterm2"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "left_arrow",
+          "modifiers": [
+            "option"
+          ]
+        },
+        "type": "basic"
+      },
+
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.googlecode.iterm2"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "right_arrow",
+          "modifiers": [
+            "option"
+          ]
+        },
+        "type": "basic"
       }
+
     ]
   }
 ]

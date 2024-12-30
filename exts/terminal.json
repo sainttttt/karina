@@ -320,14 +320,51 @@
     ]
   },
 
+
   {
-    "description": "disable command k",
+    "description": "vim scroll command k",
     "manipulators": [
       {
         "conditions": [
           {
             "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow",
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "disable acommand k",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##editorsandterms",
+            "type": "frontmost_application_unless"
           },
           {
             "type": "variable_if",
@@ -706,6 +743,40 @@
     ]
   },
 
+  { "description": "vim reload file",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 2
+          }
+        ],
+        "from": {
+          "key_code": "e",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+            "key_code": "0",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
   {
     "description": "iterm command f to control c",
     "manipulators": [
@@ -995,9 +1066,10 @@
         },
 
         "to": {
-          "key_code": "c",
+          "key_code": "z",
           "modifiers": [
-            "option"
+            "option",
+            "shift"
           ]
 
         },

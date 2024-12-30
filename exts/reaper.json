@@ -1,0 +1,28 @@
+[
+
+  { "description": "toggle plugin down",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.cockos.reaper"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+
+        "from": {
+          "key_code": "q"
+        },
+        "to": {
+          "key_code": "b",
+          "modifiers": [
+            "command"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  }
+]

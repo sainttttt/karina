@@ -1,3 +1,70 @@
+hyphen stuff
+
+  {
+    "description": "hyphen",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "hyphen",
+          "modifiers": {
+            "mandatory": [
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "hyphen",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "hyphen",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "hyphen",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "hyphen"
+        },
+        "to": [
+          {
+            "key_code": "right_option"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+
+
+
 { "description": "q nav layer mod",
     "manipulators": [
       {
@@ -151,3 +218,7 @@
 
   waht are
 var a
+
+
+
+

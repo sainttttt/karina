@@ -5,7 +5,6 @@ import print
 import glob
 import regex
 
-
 var baseJsonFile = getAppDir() & "/base.json"
 var baseSwapJsonFile = getAppDir() & "/swap-base.json"
 
@@ -64,10 +63,10 @@ proc run() =
   writeFile(expandTilde(&"~/.config/karabiner/{paramStr(1)}-swap.json"), baseSwapJson.pretty)
 
   var f_swap = parseJson(openFileStream("~/.config/karabiner/f-swap.json".expandTilde))
-  var d_swap = parseJson(openFileStream("~/.config/karabiner/d-swap.json".expandTilde))
+  # var d_swap = parseJson(openFileStream("~/.config/karabiner/d-swap.json".expandTilde))
 
   baseJson["profiles"][0]["complex_modifications"]["rules"].add(f_swap)
-  baseJson["profiles"][0]["complex_modifications"]["rules"].add(d_swap)
+  # baseJson["profiles"][0]["complex_modifications"]["rules"].add(d_swap)
 
   writeFile(outFile.expandTilde, baseJson.pretty)
 

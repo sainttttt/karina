@@ -4,5 +4,6 @@
   "com.naver.Whale",
   "^org.mozilla.firefox*",
   "com.brave.Browser",
-  "com.google.Chrome"
+  "com.google.Chrome",
+  "org.mozilla.nightly"
 ]

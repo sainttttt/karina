@@ -102,6 +102,59 @@
     ]
   },
 
+  { "description": "Youtube send comment",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "a",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "tab"
+          },
+          {
+            "key_code": "tab"
+          },
+          {
+            "key_code": "tab"
+          },
+          {
+            "key_code": "spacebar"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
   { "description": "Search text backwards command G replacement",
     "manipulators": [
       {
@@ -226,7 +279,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -263,7 +316,7 @@
           "modifiers": {
             "mandatory": [
               "option"
-                                        ]
+            ]
           }
         },
         "to": [
@@ -294,8 +347,9 @@
           "key_code": "r",
           "modifiers": {
             "mandatory": [
-              "option"
-                                        ]
+              "option",
+              "command"
+            ]
           }
         },
         "to": [

@@ -95,7 +95,7 @@
           }
         ],
         "from": {
-          "key_code": "h",
+          "key_code": "l",
           "modifiers": {
             "mandatory": [
               "command"

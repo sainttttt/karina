@@ -82,7 +82,7 @@
         },
         "to": [
           {
-            "key_code": "vk_none"
+            "key_code": "right_option"
           }
         ],
         "type": "basic"
@@ -201,35 +201,14 @@
   },
 
   {
-    "description": "hyphen",
+    "description": "equals",
     "manipulators": [
       {
         "from": {
-          "key_code": "hyphen",
+          "key_code": "close_bracket",
           "modifiers": {
-            "mandatory": [
-              "shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "vk_none"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "hyphen",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "hyphen",
-          "modifiers": {
-            "mandatory": [
+            "optional": [
+              "shift",
               "option"
             ]
           }
@@ -245,32 +224,23 @@
   },
 
   {
-    "description": "hyphen",
+    "description": "5 option disable",
     "manipulators": [
       {
-        "from": {
-          "key_code": "hyphen"
-        },
-        "to": [
+
+        "conditions": [
           {
-            "key_code": "right_shift"
+            "bundle_identifiers": [
+              "com.cockos.reaper"
+            ],
+            "type": "frontmost_application_unless"
           }
         ],
-        "type": "basic"
-      }
-    ]
-  },
 
-
-  {
-    "description": "equals",
-    "manipulators": [
-      {
         "from": {
-          "key_code": "close_bracket",
+          "key_code": "5",
           "modifiers": {
-            "optional": [
-              "shift",
+            "mandatory": [
               "option"
             ]
           }
