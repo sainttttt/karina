@@ -1,4 +1,4 @@
 [
-  "^org.mozilla.firefoxdeveloperedition$",
+  "org.mozilla.firefoxdeveloperedition",
   "org.chromium.Chromium"
 ]

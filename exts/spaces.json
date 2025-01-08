@@ -138,7 +138,7 @@
   },
 
   {
-    "description": "Switch to 6 Space ",
+    "description": "Switch to 7 Space ",
     "manipulators": [
       {
         "from": {
@@ -152,7 +152,7 @@
         },
         "to": [
           {
-            "key_code": "6",
+            "key_code": "7",
             "modifiers": [
               "control"
             ]
@@ -179,7 +179,7 @@
         },
         "to": [
           {
-            "key_code": "6",
+            "key_code": "7",
             "modifiers": [
               "control"
                                         ]
