@@ -15,7 +15,7 @@ proc jsonSub(m: RegexMatch2, s: string): string =
   let f = s[m.group(0)]
   result = readFile(getAppDir() & "/subs/" & fmt"{f}.json")
 
-proc genKaraJson(write = false): JsonNode =
+proc genKaraJson(addSubs = false, write = false): JsonNode =
   var baseJson = parseJson(openFileStream(baseJsonFile))
   for path in walkGlob(getAppDir() & "/exts/*.json"):
     let extRules = parseJson(openFileStream(path))
@@ -23,9 +23,10 @@ proc genKaraJson(write = false): JsonNode =
       let repJson = parseJson(($r).replace(re2""""##(\w+)"""", jsonSub))
       baseJson["profiles"][0]["complex_modifications"]["rules"].add(repJson)
 
-  for path in walkGlob("~/.config/karabiner/*-swap.json".expandTilde):
-    baseJson["profiles"][0]["complex_modifications"]["rules"]
-    .add(parseJson(openFileStream(path)))
+  if addSubs:
+    for path in walkGlob("~/.config/karabiner/*-swap.json".expandTilde):
+      baseJson["profiles"][0]["complex_modifications"]["rules"]
+      .add(parseJson(openFileStream(path)))
 
   if write:
     writeFile(outFile.expandTilde, baseJson.pretty)
@@ -36,7 +37,7 @@ proc genKaraJson(write = false): JsonNode =
 proc run() =
 
   if paramCount() == 0:
-    discard genKaraJson(write = true)
+    discard genKaraJson(write = true, addSubs = true)
     return
 
 
@@ -47,7 +48,8 @@ proc run() =
 
   currentSpace = currentSpace.replace("\n", "")
 
-  var baseJson = genKaraJson()
+  var baseJson = genKaraJson(addSubs = false)
+  writeFile(expandTilde(&"~/karalog1.json"), baseJson.pretty)
 
   var baseSwapJson = parseJson(openFileStream(baseSwapJsonFile))
 
@@ -69,6 +71,8 @@ proc run() =
   # baseJson["profiles"][0]["complex_modifications"]["rules"].add(d_swap)
 
   writeFile(outFile.expandTilde, baseJson.pretty)
+  writeFile(expandTilde(&"~/karalog2.json"), f_swap.pretty)
+  writeFile(expandTilde(&"~/karalog3.json"), baseJson.pretty)
 
 
 run()
