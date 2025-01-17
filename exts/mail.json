@@ -1,0 +1,102 @@
+[
+  {
+    "description": "global search",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.apple.mail"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "f",
+
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "f",
+          "modifiers": [
+            "command",
+            "option"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "message search",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.apple.mail"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "f",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "f",
+          "modifiers": [
+            "command"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "send",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.apple.mail"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "d",
+          "modifiers": [
+            "command",
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  }
+]
