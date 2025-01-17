@@ -112,7 +112,7 @@
   },
 
   {
-    "description": "Switch to 5 5pace Cancel",
+    "description": "Switch to 5 5pace ",
     "manipulators": [
       {
         "from": {
@@ -127,6 +127,58 @@
         "to": [
           {
             "key_code": "5",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Switch to 6 5pace ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "period",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "6",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Switch to 6 Space ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "6",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "6",
             "modifiers": [
               "control"
             ]

@@ -5,5 +5,6 @@
   "^org.mozilla.firefox*",
   "com.brave.Browser",
   "com.google.Chrome",
-  "org.mozilla.nightly"
+  "org.mozilla.nightly",
+  "org.mozilla.librewolf"
 ]

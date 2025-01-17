@@ -271,7 +271,7 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Chromium.app/Contents/MacOS/Chromium'"
+            "shell_command": "open -a '/Applications/LibreWolf.app/Contents/MacOS/librewolf'"
           }
         ],
         "type": "basic"

@@ -1,4 +1,5 @@
 [
   "org.mozilla.firefoxdeveloperedition",
-  "org.chromium.Chromium"
+  "org.chromium.Chromium",
+  "org.mozilla.librewolf"
 ]

@@ -37,6 +37,61 @@
     ]
   },
 
+  { "description": "disable esc",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.cockos.reaper"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+
+        "from": {
+          "key_code": "escape"
+        },
+        "to": {
+          "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  { "description": "esc command nav layer mod",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.cockos.reaper"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "escape",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+
+        "to_if_alone": [
+          {
+          "key_code": "escape"
+          }
+        ],
+
+        "type": "basic"
+      }
+    ]
+  },
+
   { "description": "add plugin 1",
     "manipulators": [
       {
