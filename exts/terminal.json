@@ -31,6 +31,35 @@
     ]
   },
 
+  {
+    "description": "command shift o disable",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##editorsandterms",
+            "type": "frontmost_application_if"
+          }
+        ],
+
+        "from": {
+          "key_code": "o",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "command"
+            ]
+          }
+        },
+
+        "to": {
+          "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
   { "description": "fromE - zsh iTerm macros",
     "manipulators": [
       {
