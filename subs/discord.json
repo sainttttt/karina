@@ -1,5 +1,8 @@
 [
   "org.mozilla.firefoxdeveloperedition",
   "org.chromium.Chromium",
-  "org.mozilla.librewolf"
+  "org.mozilla.librewolf",
+  "com.operasoftware.OperaGX",
+  "com.operasoftware.Opera",
+  "org.chromium.Thorium"
 ]

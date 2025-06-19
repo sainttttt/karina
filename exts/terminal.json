@@ -32,6 +32,39 @@
   },
 
   {
+    "description": "command i to option shift a for vim stuff",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##editorsandterms",
+            "type": "frontmost_application_if"
+          }
+        ],
+
+        "from": {
+          "key_code": "i",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+
+        "to": {
+          "key_code": "a",
+          "modifiers": [
+            "shift",
+            "option"
+          ]
+
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "command shift o disable",
     "manipulators": [
       {

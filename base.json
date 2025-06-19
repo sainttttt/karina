@@ -561,6 +561,13 @@
                         "description": "fromM - unmap command M minimize",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "nav_layer",
+                                        "value": 0
+                                    }
+                                ],
 
                                 "from": {
                                     "key_code": "m",

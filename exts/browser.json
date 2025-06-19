@@ -32,6 +32,79 @@
     ]
   },
 
+  { "description": "tab to new window",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 4
+          }
+        ],
+        "from": {
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "n",
+            "modifiers": [
+              "command",
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "tab to new window",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "n",
+            "modifiers": [
+              "command",
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
   { "description": "fromD Use Command+D to focus address bar in Firefox",
     "manipulators": [
       {
@@ -155,18 +228,6 @@
           }
         },
         "to": [
-          {
-            "key_code": "a",
-            "modifiers": [
-              "command"
-            ]
-          },
-          {
-            "key_code": "c",
-            "modifiers": [
-              "command"
-            ]
-          },
           {
             "key_code": "tab"
           },

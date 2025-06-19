@@ -41,6 +41,29 @@
   },
 
   {
+    "description": "underscore",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "0",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "hyphen",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "exclamation",
     "manipulators": [
       {
@@ -79,47 +102,6 @@
       }
     ]
   },
-
-  {
-    "description": "hyphen",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "8",
-          "modifiers": {
-            "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "hyphen"
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "underscore",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "0",
-          "modifiers": {
-            "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "hyphen",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-
 
   {
     "description": "percent",
@@ -199,12 +181,34 @@
     ]
   },
 
+
+  {
+    "description": "pipe",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "y",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "backslash",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
   {
     "description": "caret",
     "manipulators": [
       {
         "from": {
-          "key_code": "hyphen",
+          "key_code": "equal_sign",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -221,17 +225,50 @@
   },
 
   {
-    "description": "ampersand",
+    "description": "hyphen",
     "manipulators": [
       {
         "from": {
-          "key_code": "hyphen",
+          "key_code": "8",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "hyphen"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "hyphen 2",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "equal_sign"
+        },
+        "to": {
+          "key_code": "hyphen"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "plus",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "9",
           "modifiers": {
             "mandatory": "##level0symbol"
           }
         },
         "to": {
-          "key_code": "7",
+          "key_code": "equal_sign",
           "modifiers": [
             "shift"
           ]
@@ -281,13 +318,13 @@
   },
 
   {
-    "description": "pipe",
+    "description": "7 disable",
     "manipulators": [
       {
         "from": {
-          "key_code": "9",
+          "key_code": "7",
           "modifiers": {
-            "mandatory": "##level3symbol"
+            "mandatory": "##level1symbol"
           }
         },
         "to": {
@@ -322,21 +359,39 @@
     ]
   },
 
-
   {
-    "description": "plus",
+    "description": "caret",
     "manipulators": [
       {
         "from": {
-          "key_code": "9",
+          "key_code": "hyphen",
           "modifiers": {
-            "mandatory": [
-              "shift"
-            ]
+            "mandatory": "##level3symbol"
           }
         },
         "to": {
-          "key_code": "equal_sign",
+          "key_code": "6",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "ampersand",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "hyphen",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "7",
           "modifiers": [
             "shift"
           ]
@@ -351,12 +406,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "8",
-          "modifiers": {
-            "mandatory": [
-              "shift"
-            ]
-          }
+          "key_code": "hyphen"
         },
         "to": {
           "key_code": "quote"
@@ -406,17 +456,17 @@
   },
 
   {
-    "description": "asterisk ",
+    "description": "double quote 2",
     "manipulators": [
       {
         "from": {
-          "key_code": "8",
+          "key_code": "hyphen",
           "modifiers": {
-            "mandatory": "##level3symbol"
+            "mandatory": "##level0symbol"
           }
         },
         "to": {
-          "key_code": "8",
+          "key_code": "quote",
           "modifiers": [
             "shift"
           ]
@@ -431,16 +481,18 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "8",
+          "key_code": "hyphen",
           "modifiers": {
             "mandatory": [
-              "shift",
               "option"
             ]
           }
         },
         "to": {
-          "key_code": "slash"
+          "key_code": "7",
+          "modifiers": [
+            "shift"
+          ]
         },
         "type": "basic"
       }
@@ -452,7 +504,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "q",
+          "key_code": "a",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -473,7 +525,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "w",
+          "key_code": "s",
           "modifiers": {
             "mandatory": "##level1symbol"
 
@@ -539,7 +591,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "d",
+          "key_code": "q",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -557,7 +609,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "f",
+          "key_code": "w",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -576,7 +628,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "a",
+          "key_code": "d",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -598,7 +650,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "s",
+          "key_code": "f",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -641,30 +693,6 @@
     "description": "ctrl stuff",
     "manipulators": [
       {
-        "from": {
-          "key_code": "i",
-          "modifiers": {
-            "mandatory": [
-              "command"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "a",
-          "modifiers": [
-            "option",
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "ctrl stuff",
-    "manipulators": [
-      {
 
         "conditions": [
           {
@@ -686,6 +714,30 @@
           "key_code": "o",
           "modifiers": [
             "control"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "command option p to command p",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "p",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "p",
+          "modifiers": [
+            "command"
           ]
         },
         "type": "basic"

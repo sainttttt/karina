@@ -1,28 +1,4 @@
 [
-  {
-    "description": "equals",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "equal_sign",
-          "modifiers": {
-            "optional": [
-              "shift",
-              "option"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "vk_none"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-
-  },
-
 
   {
     "description": "backslash",
@@ -89,8 +65,6 @@
       }
     ]
   },
-
-
 
   {
     "description": "zero",
