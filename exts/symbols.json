@@ -183,27 +183,6 @@
 
 
   {
-    "description": "pipe",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "y",
-          "modifiers": {
-            "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "backslash",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
     "description": "caret",
     "manipulators": [
       {
@@ -442,27 +421,6 @@
           "key_code": "u",
           "modifiers": {
             "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "quote",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "double quote 2",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "hyphen",
-          "modifiers": {
-            "mandatory": "##level0symbol"
           }
         },
         "to": {

@@ -23,6 +23,42 @@
   },
 
   {
+    "description": "disable option y",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "y",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "disable shift hypen",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "hyphen",
+          "modifiers": {
+            "mandatory": "##level0symbol"
+          }
+        },
+        "to": {
+          "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "exclamation",
     "manipulators": [
       {
