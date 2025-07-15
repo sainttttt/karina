@@ -18,6 +18,21 @@
   },
 
   {
+    "description": "equals to option",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "equal_sign"
+        },
+        "to": {
+          "key_code": "left_option"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "exclamation 2",
     "manipulators": [
       {
