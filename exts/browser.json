@@ -369,7 +369,8 @@
           "key_code": "x",
           "modifiers": {
             "mandatory": [
-              "option"
+              "option",
+              "command"
             ]
           }
         },
@@ -387,6 +388,44 @@
     ]
   },
 
+
+  {
+    "description": "whale vertical tab thing",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "control"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "l",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
   {
     "description": "fromC - browsers inspect",
     "manipulators": [
@@ -406,7 +445,8 @@
           "key_code": "c",
           "modifiers": {
             "mandatory": [
-              "option"
+              "option",
+              "command"
             ]
           }
         },
@@ -585,6 +625,71 @@
       }
     ]
   },
+
+  { "description": "Browser Tab Down",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsersnodisc",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "close_bracket",
+          "modifiers": [
+            "command",
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Browser Tab Up",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsersnodisc",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "open_bracket",
+          "modifiers": [
+            "command",
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+
+
+
+
 
   { "description": "Browser Forward",
     "manipulators": [

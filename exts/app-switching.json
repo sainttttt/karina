@@ -194,7 +194,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "v",
+          "key_code": "c",
           "modifiers": {
             "mandatory": [
               "shift",
@@ -204,7 +204,7 @@
         },
         "to": [
           {
-            "key_code": "1",
+            "key_code": "3",
             "modifiers": [
               "control"
             ]
@@ -486,7 +486,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "c",
+          "key_code": "v",
           "modifiers": {
             "mandatory": [
               "shift",
