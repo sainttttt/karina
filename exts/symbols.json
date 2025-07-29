@@ -18,6 +18,59 @@
   },
 
   {
+    "description": "colon",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "semicolon",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "semicolon",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "emoji",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "spacebar",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "spacebar",
+          "modifiers": [
+            "control",
+            "command"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "exclamation 2",
     "manipulators": [
       {
@@ -381,12 +434,31 @@
       }
     ]
   },
+
+
   {
     "description": "alternate option",
     "manipulators": [
       {
         "from": {
           "key_code": "open_bracket"
+        },
+        "to": [
+          {
+            "key_code": "left_option"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "alternate shift",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "equal_sign"
         },
         "to": [
           {
@@ -397,6 +469,7 @@
       }
     ]
   },
+
 
   {
     "description": "7 disable",

@@ -80,7 +80,7 @@
     ]
   },
 
-  {
+ {
     "description": "period",
     "manipulators": [
       {
@@ -249,7 +249,7 @@
   },
 
   {
-    "description": "equals",
+    "description": "quote disable",
     "manipulators": [
       {
         "from": {

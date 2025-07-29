@@ -541,7 +541,7 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "option",
-                                            "command"
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -1134,7 +1134,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "f11"
+                                    "key_code": "f10"
                                 },
                                 "to": [
                                     {
@@ -1145,11 +1145,23 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "f12"
+                                    "key_code": "f11"
                                 },
                                 "to": [
                                     {
                                         "consumer_key_code": "volume_decrement"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+                            {
+                                "from": {
+                                    "key_code": "f12"
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "volume_increment"
                                     }
                                 ],
                                 "type": "basic"
@@ -1570,6 +1582,13 @@
                         "description": "option space disable",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "nav_layer",
+                                        "value": 0
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {

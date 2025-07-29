@@ -51,7 +51,7 @@
     ]
   },
 
-  { "description": "switch to reaper",
+  { "description": "switch to mpv",
     "manipulators": [
       {
         "conditions": [
@@ -62,7 +62,7 @@
           }
         ],
         "from": {
-          "key_code": "c",
+          "key_code": "d",
           "modifiers": {
             "mandatory": [
               "option"
@@ -77,7 +77,7 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/REAPER.app/Contents/MacOS/REAPER'"
+            "shell_command": "open -a '/Applications/mpv.app/'"
           }
         ],
         "type": "basic"
@@ -190,7 +190,7 @@
   },
 
   {
-    "description": "fromE - Switch to Firefox Dev",
+    "description": "fromE - Switch to Firefox",
     "manipulators": [
       {
         "from": {
@@ -211,7 +211,7 @@
           },
           {
 
-            "shell_command": "open -a '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'"
+            "shell_command": "open -a '/Applications/Firefox.app/Contents/MacOS/firefox'"
           }
         ],
         "type": "basic"
@@ -225,7 +225,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "r",
+          "key_code": "e",
           "modifiers": {
             "mandatory": [
               "shift",
@@ -255,7 +255,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "r",
+          "key_code": "e",
           "modifiers": {
             "mandatory": [
               "shift",
@@ -365,11 +365,11 @@
 
 
   {
-    "description": "fromE - Switch to Telegram Swift",
+    "description": "fromE - Switch to Telegram Lite",
     "manipulators": [
       {
         "from": {
-          "key_code": "e",
+          "key_code": "w",
           "modifiers": {
             "mandatory": [
               "shift",
@@ -385,36 +385,6 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Telegram Lite.app/Contents/MacOS/Telegram Lite'"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "fromQ - Switch to Telegram Desktop",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "q",
-          "modifiers": {
-            "mandatory": [
-              "shift",
-              "option"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "2",
-            "modifiers": [
-              "control"
-            ]
-          },
-          {
-
             "shell_command": "open -a '/Applications/Telegram Lite.app/Contents/MacOS/Telegram Lite'"
           }
         ],
@@ -503,36 +473,6 @@
           },
           {
             "shell_command": "open -a '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "fromV - Switch to mpv ",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "z",
-          "modifiers": {
-            "mandatory": [
-              "shift",
-              "option"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "4",
-            "modifiers": [
-              "control"
-            ]
-          },
-          {
-
-            "shell_command": "open -a '/Applications/mpv.app/'"
           }
         ],
         "type": "basic"
