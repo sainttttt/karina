@@ -115,7 +115,7 @@
   },
 
   {
-    "description": "fromA - Switch to Whale",
+    "description": "fromA - Switch to Firefox developer",
     "manipulators": [
       {
         "from": {
@@ -135,7 +135,7 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Whale.app'"
+            "shell_command": "open -a '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'"
           }
         ],
         "type": "basic"
@@ -212,6 +212,33 @@
           {
 
             "shell_command": "open -a '/Applications/Firefox.app/Contents/MacOS/firefox'"
+          }
+        ],
+        "type": "basic"
+      }
+
+    ]
+  },
+
+  {
+    "description": "fromW - Switch to blank command R",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          },
+          {
+            "shell_command": ""
           }
         ],
         "type": "basic"
@@ -363,7 +390,6 @@
     ]
   },
 
-
   {
     "description": "fromE - Switch to Telegram Lite",
     "manipulators": [
@@ -386,6 +412,18 @@
           },
           {
             "shell_command": "open -a '/Applications/Telegram Lite.app/Contents/MacOS/Telegram Lite'"
+          },
+
+          {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 300
+          },
+
+          {
+            "key_code": "1",
+            "modifiers": [
+              "command"
+            ]
           }
         ],
         "type": "basic"
@@ -393,10 +431,19 @@
     ]
   },
 
+
   {
     "description": "fromC - Switch to Mail",
     "manipulators": [
       {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.apple.mail"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
         "from": {
           "key_code": "c",
           "modifiers": {
@@ -408,13 +455,13 @@
         },
         "to": [
           {
+            "shell_command": "open -a '/System/Applications/Mail.app/Contents/MacOS/Mail'"
+          },
+          {
             "key_code": "2",
             "modifiers": [
               "control"
             ]
-          },
-          {
-            "shell_command": "open -a '/System/Applications/Mail.app/Contents/MacOS/Mail'"
           }
         ],
         "type": "basic"

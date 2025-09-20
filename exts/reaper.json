@@ -81,6 +81,24 @@
           }
         },
 
+        "to": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 1
+            }
+          }
+        ],
+
+        "to_after_key_up": [
+          {
+            "set_variable": {
+              "name": "nav_layer",
+              "value": 0
+            }
+          }
+        ],
+
         "to_if_alone": [
           {
           "key_code": "escape"

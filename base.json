@@ -264,7 +264,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
+                                            "com.googlecode.iterm2",
+                                            "^org.mozilla.firefox*"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -292,7 +293,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
+                                            "com.googlecode.iterm2",
+                                            "^org.mozilla.firefox*"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }

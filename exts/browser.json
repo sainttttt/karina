@@ -1,5 +1,4 @@
 [
-
   {
     "description": "command q to command n new",
     "manipulators": [
@@ -183,11 +182,11 @@
           {
             "type": "variable_if",
             "name": "nav_layer",
-            "value": 1
+            "value": 0
           }
         ],
         "from": {
-          "key_code": "f",
+          "key_code": "4",
           "modifiers": {
             "mandatory": [
               "command"
@@ -198,6 +197,41 @@
           "key_code": "g",
           "modifiers": [
             "command"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Search text backwards command G replacement",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "3",
+          "modifiers": {
+            "mandatory": [
+              "command"
+
+            ]
+          }
+        },
+        "to": {
+          "key_code": "g",
+          "modifiers": [
+            "command",
+            "shift"
           ]
         },
         "type": "basic"
@@ -223,7 +257,8 @@
           "key_code": "n",
           "modifiers": {
             "mandatory": [
-              "option"
+              "option",
+              "shift"
             ]
           }
         },
@@ -241,40 +276,6 @@
             "key_code": "spacebar"
           }
         ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  { "description": "Search text backwards command G replacement",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": "##browsers",
-            "type": "frontmost_application_if"
-          },
-          {
-            "type": "variable_if",
-            "name": "nav_layer",
-            "value": 1
-          }
-        ],
-        "from": {
-          "key_code": "d",
-          "modifiers": {
-            "mandatory": [
-              "command"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "g",
-          "modifiers": [
-            "command",
-            "shift"
-          ]
-        },
         "type": "basic"
       }
     ]
@@ -594,38 +595,6 @@
     ]
   },
 
-  { "description": "Browser Back",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "com.googlecode.iterm2",
-              "com.neovide.neovide"
-            ],
-            "type": "frontmost_application_unless"
-          }
-        ],
-        "from": {
-          "key_code": "m",
-          "modifiers": {
-            "mandatory": [
-              "command",
-              "shift"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "open_bracket",
-          "modifiers": [
-            "command"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
   { "description": "Browser Tab Down",
     "manipulators": [
       {
@@ -633,6 +602,10 @@
           {
             "bundle_identifiers": "##browsersnodisc",
             "type": "frontmost_application_if"
+          },
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_unless"
           }
         ],
         "from": {
@@ -663,6 +636,10 @@
           {
             "bundle_identifiers": "##browsersnodisc",
             "type": "frontmost_application_if"
+          },
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_unless"
           }
         ],
         "from": {

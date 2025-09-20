@@ -192,6 +192,107 @@
   },
 
   {
+    "description": "shortcut to slot 2",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "2",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "g",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          },
+
+          {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 100
+          },
+          {"shell_command":"osascript -e 'set temp to the clipboard \n set the clipboard to \"~/Screenshots/\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.15 \n end tell \n set the clipboard to temp'"},
+
+          {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 400
+          },
+
+          {
+            "key_code": "return_or_enter"
+          }
+
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "shortcut to slot 3",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "3",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "g",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          },
+
+          {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 100
+          },
+          {"shell_command":"osascript -e 'set temp to the clipboard \n set the clipboard to \"~/Downloads/\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.2 \n end tell \n set the clipboard to temp'"},
+
+          {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 400
+          },
+
+          {
+            "key_code": "return_or_enter"
+          }
+
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  {
     "description": "fromF Finder search disable",
     "manipulators": [
       {

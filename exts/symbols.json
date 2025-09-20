@@ -94,7 +94,7 @@
   },
 
   {
-    "description": "exclamation",
+    "description": "caret",
     "manipulators": [
       {
         "from": {
@@ -106,7 +106,7 @@
           }
         },
         "to": {
-          "key_code": "1",
+          "key_code": "6",
           "modifiers": [
             "shift"
           ]
@@ -312,10 +312,7 @@
           }
         },
         "to": {
-          "key_code": "6",
-          "modifiers": [
-            "shift"
-          ]
+          "key_code": "vk_none"
         },
         "type": "basic"
       }
@@ -383,25 +380,6 @@
   },
 
   {
-    "description": "backtick",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "i",
-          "modifiers": {
-            "mandatory": "##level3symbol"
-          }
-        },
-        "to": {
-          "key_code": "grave_accent_and_tilde"
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-
-  {
     "description": "alternate option",
     "manipulators": [
       {
@@ -434,6 +412,8 @@
       }
     ]
   },
+
+
 
 
   {
@@ -493,6 +473,91 @@
   },
 
   {
+    "description": "ampersand key",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "y",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "7",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "hash key",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "3",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "dollar sign",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "b",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "4",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  {
+    "description": "at sign",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "2",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "question",
     "manipulators": [
       {
@@ -535,7 +600,7 @@
   },
 
   {
-    "description": "ampersand",
+    "description": "exclamation 2",
     "manipulators": [
       {
         "from": {
@@ -545,7 +610,7 @@
           }
         },
         "to": {
-          "key_code": "7",
+          "key_code": "1",
           "modifiers": [
             "shift"
           ]
