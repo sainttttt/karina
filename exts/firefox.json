@@ -1,0 +1,194 @@
+[
+  {
+    "description": "prev tab",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "7",
+            "modifiers": [
+              "option",
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "new tab next at end",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "t",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "5",
+            "modifiers": [
+              "command",
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "new tab next to current",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "t",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "6",
+            "modifiers": [
+              "command",
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "next tab",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "8",
+            "modifiers": [
+              "command",
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Browser Tab Down",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "8",
+          "modifiers": [
+            "command",
+            "option"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "Browser Tab Up",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "7",
+          "modifiers": [
+            "command",
+            "option"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+
+
+]
