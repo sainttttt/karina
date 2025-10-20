@@ -113,7 +113,7 @@
   },
 
   {
-    "description": "ctrl stuff",
+    "description": "gitui push but other stuff sure",
     "manipulators": [
       {
 
@@ -139,6 +139,41 @@
         },
         "to": {
           "key_code": "p",
+          "modifiers": [
+            "control"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "gitui exit",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": "##editorsandterms",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "p",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "x",
           "modifiers": [
             "control"
           ]
