@@ -62,17 +62,14 @@ proc run() =
   var cmd = baseSwapJson["manipulators"][0]["to"][1]["shell_command"].getStr
   baseSwapJson["manipulators"][0]["to"][1]["shell_command"] = %cmd.replace("#", currentProg)
 
+  # read all the swap slot config files and add them to our main json variable before
+  # writing out
   writeFile(expandTilde(&"~/.config/karabiner/{paramStr(1)}-swap.json"), baseSwapJson.pretty)
-
-  var f_swap = parseJson(openFileStream("~/.config/karabiner/f-swap.json".expandTilde))
-  # var d_swap = parseJson(openFileStream("~/.config/karabiner/d-swap.json".expandTilde))
-
-  baseJson["profiles"][0]["complex_modifications"]["rules"].add(f_swap)
-  # baseJson["profiles"][0]["complex_modifications"]["rules"].add(d_swap)
+  for path in walkGlob("~/.config/karabiner/*-swap.json".expandTilde):
+    baseJson["profiles"][0]["complex_modifications"]["rules"]
+    .add(parseJson(openFileStream(path)))
 
   writeFile(outFile.expandTilde, baseJson.pretty)
-  writeFile(expandTilde(&"~/karalog2.json"), f_swap.pretty)
-  writeFile(expandTilde(&"~/karalog3.json"), baseJson.pretty)
 
 
 run()

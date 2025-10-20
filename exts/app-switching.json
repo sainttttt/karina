@@ -58,14 +58,15 @@
           {
             "type": "variable_if",
             "name": "nav_layer",
-            "value": 4
+            "value": 0
           }
         ],
         "from": {
-          "key_code": "d",
+          "key_code": "v",
           "modifiers": {
             "mandatory": [
-              "option"
+              "option",
+              "shift"
             ]
           }
         },
@@ -107,6 +108,35 @@
           },
           {
             "shell_command": "open -a '/Applications/iTerm.app'"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "Switch to Comet/AI browser",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "x",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "1",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/Applications/Comet.app/Contents/MacOS/Comet'"
           }
         ],
         "type": "basic"
@@ -470,11 +500,11 @@
   },
 
   {
-    "description": "fromX - Switch to Music Browser ",
+    "description": "Switch to Music Browser ",
     "manipulators": [
       {
         "from": {
-          "key_code": "e",
+          "key_code": "v",
           "modifiers": {
             "mandatory": [
               "shift",

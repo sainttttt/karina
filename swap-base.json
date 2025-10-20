@@ -1,5 +1,5 @@
 {
-  "description": "Switch to # (Swap Slot 1)",
+  "description": "Switch to # (Swap Slot)",
   "manipulators": [
     {
       "from": {
