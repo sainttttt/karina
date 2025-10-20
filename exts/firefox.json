@@ -33,6 +33,66 @@
   },
 
   {
+    "description": "prev active tab",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "1",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "1",
+            "modifiers": [
+              "control",
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "disable command 2",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "2",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "new tab next at end",
     "manipulators": [
       {
