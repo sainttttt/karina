@@ -284,8 +284,7 @@
           "key_code": "comma",
           "modifiers": {
             "optional": [
-              "shift",
-              "option"
+              "shift"
             ]
           }
         },

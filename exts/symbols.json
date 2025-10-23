@@ -1,6 +1,5 @@
 [
-  {
-    "description": "equals",
+  { "description": "equals",
     "manipulators": [
       {
         "from": {
@@ -17,8 +16,7 @@
     ]
   },
 
-  {
-    "description": "colon",
+  { "description": "colon",
     "manipulators": [
       {
         "from": {
@@ -38,8 +36,7 @@
     ]
   },
 
-  {
-    "description": "emoji",
+  { "description": "emoji",
     "manipulators": [
       {
         "conditions": [
@@ -70,8 +67,7 @@
     ]
   },
 
-  {
-    "description": "exclamation 2",
+  { "description": "exclamation 2",
     "manipulators": [
       {
         "from": {
@@ -93,31 +89,7 @@
     ]
   },
 
-  {
-    "description": "caret",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "x",
-          "modifiers": {
-            "mandatory": [
-              "option"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "6",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "asterisk",
+  { "description": "asterisk",
     "manipulators": [
       {
         "from": {
@@ -139,8 +111,7 @@
     ]
   },
 
-  {
-    "description": "plus",
+  { "description": "plus",
     "manipulators": [
       {
         "from": {
@@ -162,8 +133,7 @@
     ]
   },
 
-  {
-    "description": "underscore",
+  { "description": "underscore",
     "manipulators": [
       {
         "from": {
@@ -185,8 +155,7 @@
     ]
   },
 
-  {
-    "description": "semicolon",
+  { "description": "semicolon",
     "manipulators": [
       {
         "from": {
@@ -204,8 +173,7 @@
   },
 
 
-  {
-    "description": "comma",
+  { "description": "comma",
     "manipulators": [
       {
         "from": {
@@ -222,8 +190,7 @@
     ]
   },
 
-  {
-    "description": "percent",
+  { "description": "percent",
     "manipulators": [
       {
         "from": {
@@ -243,8 +210,7 @@
     ]
   },
 
-  {
-    "description": "slash",
+  { "description": "slash",
     "manipulators": [
       {
         "from": {
@@ -261,26 +227,7 @@
     ]
   },
 
-  {
-    "description": "backslash",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "3",
-          "modifiers": {
-            "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "backslash"
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "percent",
+  { "description": "percent",
     "manipulators": [
       {
         "from": {
@@ -301,8 +248,7 @@
   },
 
 
-  {
-    "description": "caret",
+  { "description": "caret",
     "manipulators": [
       {
         "from": {
@@ -319,8 +265,7 @@
     ]
   },
 
-  {
-    "description": "hyphen",
+  { "description": "hyphen",
     "manipulators": [
       {
         "from": {
@@ -337,8 +282,7 @@
     ]
   },
 
-  {
-    "description": "plus",
+  { "description": "plus",
     "manipulators": [
       {
         "from": {
@@ -358,8 +302,7 @@
     ]
   },
 
-  {
-    "description": "tilde",
+  { "description": "tilde",
     "manipulators": [
       {
         "from": {
@@ -379,8 +322,7 @@
     ]
   },
 
-  {
-    "description": "alternate option",
+  { "description": "alternate option",
     "manipulators": [
       {
         "from": {
@@ -396,8 +338,7 @@
     ]
   },
 
-  {
-    "description": "alternate option",
+  { "description": "alternate option",
     "manipulators": [
       {
         "from": {
@@ -416,8 +357,7 @@
 
 
 
-  {
-    "description": "alternate option",
+  { "description": "alternate option",
     "manipulators": [
       {
         "from": {
@@ -433,8 +373,7 @@
     ]
   },
 
-  {
-    "description": "alternate shift",
+  { "description": "alternate shift",
     "manipulators": [
       {
         "from": {
@@ -451,8 +390,7 @@
   },
 
 
-  {
-    "description": "7 disable",
+  { "description": "7 disable",
     "manipulators": [
       {
         "from": {
@@ -472,8 +410,7 @@
     ]
   },
 
-  {
-    "description": "ampersand key",
+  { "description": "ampersand key",
     "manipulators": [
       {
         "from": {
@@ -493,8 +430,7 @@
     ]
   },
 
-  {
-    "description": "hash key",
+  { "description": "hash key",
     "manipulators": [
       {
         "from": {
@@ -514,8 +450,7 @@
     ]
   },
 
-  {
-    "description": "dollar sign",
+  { "description": "dollar sign",
     "manipulators": [
       {
         "from": {
@@ -535,13 +470,50 @@
     ]
   },
 
-
-  {
-    "description": "at sign",
+  { "description": "caret",
     "manipulators": [
       {
         "from": {
-          "key_code": "n",
+          "key_code": "comma",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "6",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "backslash",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "x",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "backslash"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "at sign",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "3",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -578,26 +550,6 @@
     ]
   },
 
-  {
-    "description": "caret",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "hyphen",
-          "modifiers": {
-            "mandatory": "##level3symbol"
-          }
-        },
-        "to": {
-          "key_code": "6",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
 
   {
     "description": "exclamation 2",
