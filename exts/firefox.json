@@ -1,4 +1,5 @@
 [
+
   {
     "description": "prev tab",
     "manipulators": [
@@ -32,6 +33,39 @@
     ]
   },
 
+
+  {
+    "description": "copy shortened oink",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##firefoxes",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "z",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "0",
+            "modifiers": [
+              "option",
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
   {
     "description": "prev active tab",
     "manipulators": [

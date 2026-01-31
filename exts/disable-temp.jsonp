@@ -1,0 +1,54 @@
+
+{ "description": "disable shift 0 - old exclamation",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "0",
+        "modifiers": {
+          "mandatory": [
+            "shift"
+            ]
+        }
+      },
+      "to": {
+        "key_code": "vk_none"
+      },
+      "type": "basic"
+    }
+  ]
+},
+
+{ "description": "disable shift 9 - old  plus",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "9",
+        "modifiers": {
+          "mandatory": "##level0symbol"
+        }
+      },
+      "to": {
+        "key_code": "vk_none"
+      },
+      "type": "basic"
+    }
+  ]
+},
+
+
+{ "description": "disable shift hypen",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "hyphen",
+        "modifiers": {
+          "mandatory": "##level0symbol"
+        }
+      },
+      "to": {
+        "key_code": "vk_none"
+      },
+      "type": "basic"
+    }
+  ]
+},

@@ -1,0 +1,29 @@
+[
+{
+  "description": "Remap Left Command to Option (Ukrainian Only)",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "a",
+        "modifiers": { "optional": ["any"] }
+      },
+      "to": [
+        {
+          "key_code": "b"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "input_source_if",
+          "input_sources": [
+            {
+              "language": "^uk$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+]

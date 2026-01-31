@@ -116,7 +116,7 @@
   },
 
   {
-    "description": "Switch to Comet/AI browser",
+    "description": "Switch to AI browser",
     "manipulators": [
       {
         "from": {
@@ -136,7 +136,7 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Comet.app/Contents/MacOS/Comet'"
+            "shell_command": "open -a '/Applications/Firefox Nightly.app/Contents/MacOS/firefox'"
           }
         ],
         "type": "basic"
@@ -224,7 +224,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "c",
+          "key_code": "x",
           "modifiers": {
             "mandatory": [
               "shift",
@@ -420,6 +420,42 @@
     ]
   },
 
+
+  {
+    "description": "fromE - Switch to Telegram Lite",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "f13"
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "shell_command": "open -a '/Applications/Telegram Lite.app/Contents/MacOS/Telegram Lite'"
+          },
+
+          {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 300
+          },
+
+          {
+            "key_code": "1",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
   {
     "description": "fromE - Switch to Telegram Lite",
     "manipulators": [
@@ -514,42 +550,13 @@
         },
         "to": [
           {
-            "key_code": "4",
+            "key_code": "2",
             "modifiers": [
               "control"
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Firefox Nightly.app/Contents/MacOS/firefox'"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "fromC - Switch to Brave ",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "x",
-          "modifiers": {
-            "mandatory": [
-              "shift",
-              "command"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "3",
-            "modifiers": [
-              "control"
-            ]
-          },
-          {
-            "shell_command": "open -a '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'"
+            "shell_command": "open -a '/Applications/Floorp.app/Contents/MacOS/floorp'"
           }
         ],
         "type": "basic"

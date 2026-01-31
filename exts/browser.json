@@ -103,6 +103,40 @@
     ]
   },
 
+  {
+    "description": "Raindrop bookmark",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "b",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
 
   { "description": "fromD Use Command+D to focus address bar in Firefox",
     "manipulators": [
@@ -136,36 +170,6 @@
             ]
           }
         ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  { "description": "Private window",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": "##browsers",
-            "type": "frontmost_application_if"
-          }
-        ],
-        "from": {
-          "key_code": "n",
-          "modifiers": {
-            "mandatory": [
-              "command",
-              "option"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "n",
-          "modifiers": [
-            "command",
-            "shift"
-          ]
-        },
         "type": "basic"
       }
     ]
@@ -276,31 +280,6 @@
             "key_code": "spacebar"
           }
         ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  { "description": "Search text option G disable",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": "##browsers",
-            "type": "frontmost_application_if"
-          }
-        ],
-        "from": {
-          "key_code": "g",
-          "modifiers": {
-            "mandatory": [
-              "option"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "vk_none"
-        },
         "type": "basic"
       }
     ]

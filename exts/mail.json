@@ -34,6 +34,54 @@
   },
 
   {
+    "description": "go to first 'tab' and clear search",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.apple.mail"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "1",
+
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+
+          {
+            "key_code": "f",
+            "modifiers": [
+              "command",
+              "option"
+            ]
+          },
+
+          {
+            "key_code": "delete_or_backspace"
+          },
+
+          {
+            "key_code": "1",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
     "description": "jump to top 2",
     "manipulators": [
       {
@@ -225,6 +273,38 @@
 
         ]
         ,
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "test test kindle",
+    "manipulators": [
+      {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.amazon.Lassen"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "hyphen",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "hyphen",
+          "modifiers": [
+            "command"
+          ]
+        },
         "type": "basic"
       }
     ]

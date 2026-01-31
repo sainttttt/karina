@@ -67,28 +67,6 @@
     ]
   },
 
-  { "description": "exclamation 2",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "0",
-          "modifiers": {
-            "mandatory": [
-              "shift"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "1",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
   { "description": "asterisk",
     "manipulators": [
       {
@@ -137,7 +115,7 @@
     "manipulators": [
       {
         "from": {
-          "key_code": "0",
+          "key_code": "hyphen",
           "modifiers": {
             "mandatory": [
               "option"
@@ -265,62 +243,6 @@
     ]
   },
 
-  { "description": "hyphen",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "8",
-          "modifiers": {
-            "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "hyphen"
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  { "description": "plus",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "9",
-          "modifiers": {
-            "mandatory": "##level0symbol"
-          }
-        },
-        "to": {
-          "key_code": "equal_sign",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  { "description": "tilde",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "1",
-          "modifiers": {
-            "mandatory": "##level1symbol"
-          }
-        },
-        "to": {
-          "key_code": "grave_accent_and_tilde",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
 
   { "description": "alternate option",
     "manipulators": [
@@ -390,11 +312,31 @@
   },
 
 
-  { "description": "7 disable",
+  { "description": "option 7 disable",
     "manipulators": [
       {
         "from": {
           "key_code": "7",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "vk_none",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "pipe",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "g",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -529,8 +471,65 @@
     ]
   },
 
-  {
-    "description": "question",
+
+  { "description": "hyphen",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "8",
+          "modifiers": {
+            "mandatory": "##level0symbol"
+          }
+        },
+        "to": {
+          "key_code": "hyphen"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "hyphen",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "8",
+          "modifiers": {
+            "mandatory": "##level1symbol"
+          }
+        },
+        "to": {
+          "key_code": "hyphen"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  { "description": "question ",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "9",
+          "modifiers": {
+            "mandatory": [
+              "shift"
+            ]
+          }
+        },
+        "to": {
+          "key_code": "slash",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "question",
     "manipulators": [
       {
         "from": {
@@ -552,11 +551,11 @@
 
 
   {
-    "description": "exclamation 2",
+    "description": "exclamation main (using alt)",
     "manipulators": [
       {
         "from": {
-          "key_code": "hyphen",
+          "key_code": "0",
           "modifiers": {
             "mandatory": "##level1symbol"
           }
@@ -617,29 +616,6 @@
         },
         "to": {
           "key_code": "quote",
-          "modifiers": [
-            "shift"
-          ]
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "slash ",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "hyphen",
-          "modifiers": {
-            "mandatory": [
-              "option"
-            ]
-          }
-        },
-        "to": {
-          "key_code": "7",
           "modifiers": [
             "shift"
           ]
