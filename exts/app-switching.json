@@ -136,7 +136,7 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Firefox Nightly.app/Contents/MacOS/firefox'"
+            "shell_command": "open -a '/Applications/Firefox AI.app/Contents/MacOS/firefox'"
           }
         ],
         "type": "basic"
@@ -165,7 +165,7 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'"
+            "shell_command": "open -a '/Applications/Firefox Code.app/Contents/MacOS/firefox'"
           }
         ],
         "type": "basic"
@@ -556,7 +556,7 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Floorp.app/Contents/MacOS/floorp'"
+            "shell_command": "open -a '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'"
           }
         ],
         "type": "basic"

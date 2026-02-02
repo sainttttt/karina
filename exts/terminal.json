@@ -613,37 +613,6 @@
     ]
   },
 
-  { "description": "command k disable",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": "##editorsandterms",
-            "type": "frontmost_application_if"
-          },
-          {
-            "type": "variable_if",
-            "name": "nav_layer",
-            "value": 1
-          }
-        ],
-        "from": {
-          "key_code": "k",
-          "modifiers": {
-            "mandatory": [
-              "command"
-            ]
-          }
-        },
-
-        "to": {
-          "key_code": "vk_none"
-        },
-        "type": "basic"
-      }
-    ]
-  },
-
   { "description": "vim quit program ",
     "manipulators": [
       {
@@ -1002,8 +971,7 @@
 
 
 
-  {
-    "description": "nvim move split to far left",
+  { "description": "nvim move split to far left",
     "manipulators": [
       {
         "conditions": [
@@ -1036,6 +1004,90 @@
             "modifiers": [
               "shift"
             ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "nvim next buffer",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "grave_accent_and_tilde"
+          },
+        {
+            "key_code": "j",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "nvim prev buffer",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "grave_accent_and_tilde"
+          },
+          {
+          "key_code": "vk_none"
+          },
+          {
+            "key_code": "n"
+          },
+          {
+            "key_code": "vk_none"
+          },
+          {
+            "key_code": "k"
           }
         ],
         "type": "basic"

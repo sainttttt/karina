@@ -1,0 +1,34 @@
+[
+  { "description": "Change Input Source",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 4
+          }
+        ],
+
+        "from": {
+          "key_code": "spacebar",
+          "modifiers": {
+            "mandatory": [
+              "option"
+            ]
+          }
+        },
+
+        "to": {
+          "key_code": "s",
+          "modifiers": [
+            "command",
+            "option"
+          ]
+
+        },
+        "type": "basic"
+      }
+    ]
+  }
+]
