@@ -66,6 +66,7 @@
       }
     ]
   },
+
   {
     "description": "prev active tab",
     "manipulators": [
@@ -99,7 +100,7 @@
   },
 
   {
-    "description": "disable command 2",
+    "description": "prev active tab",
     "manipulators": [
       {
         "conditions": [
@@ -118,13 +119,18 @@
         },
         "to": [
           {
-            "key_code": "vk_none"
+            "key_code": "2",
+            "modifiers": [
+              "control",
+              "command"
+            ]
           }
         ],
         "type": "basic"
       }
     ]
   },
+
 
   {
     "description": "new tab next at end",

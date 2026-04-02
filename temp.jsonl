@@ -1,34 +1,33 @@
-                    {
-                        "description": "Raindrop bookmark firefox",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org.mozilla.firefox$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "x",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
+  {
+    "description": "fromK disable optionshiftk",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##discord"
+            ,
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "q",
+            "modifiers": [
+              "option",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },

@@ -185,14 +185,44 @@
         },
         "to": [
           {
-            "key_code": "down_arrow",
-            "modifiers": [
-              "shift"
-            ]
+            "key_code": "down_arrow"
           }
         ],
         "type": "basic"
       },
+
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "down_arrow",
+            "modifiers": [
+              "shift"
+            ]
+
+          }
+        ],
+        "type": "basic"
+      },
+
+
+
       {
         "conditions": [
           {
@@ -212,6 +242,32 @@
         },
         "to": [
           {
+            "key_code": "up_arrow"
+          }
+        ],
+        "type": "basic"
+      },
+
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
             "key_code": "up_arrow",
             "modifiers": [
               "shift"
@@ -220,6 +276,9 @@
         ],
         "type": "basic"
       },
+
+
+
 
       {
         "conditions": [

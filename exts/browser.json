@@ -31,6 +31,79 @@
     ]
   },
 
+  { "description": "disable command r refresh since command t new tab is close to thi",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+
+    ]
+  },
+
+
+  { "description": "force refresh",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+
+        ],
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "r",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+
   { "description": "tab to new window",
     "manipulators": [
       {

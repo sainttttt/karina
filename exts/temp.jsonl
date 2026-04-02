@@ -1,59 +1,28 @@
-hyphen stuff
 
-  {
-    "description": "hyphen",
+  { "description": "refresh mapping",
     "manipulators": [
       {
-        "from": {
-          "key_code": "hyphen",
-          "modifiers": {
-            "mandatory": [
-              "shift"
-            ]
-          }
-        },
-        "to": [
+        "conditions": [
           {
-            "key_code": "vk_none"
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
           }
         ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "hyphen",
-    "manipulators": [
-      {
         "from": {
-          "key_code": "hyphen",
+          "key_code": "r",
           "modifiers": {
             "mandatory": [
+              "command",
               "option"
             ]
           }
         },
         "to": [
           {
-            "key_code": "vk_none"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "hyphen",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "hyphen"
-        },
-        "to": [
-          {
-            "key_code": "right_option"
+            "key_code": "r",
+            "modifiers": [
+              "command"
+            ]
           }
         ],
         "type": "basic"
@@ -62,21 +31,23 @@ hyphen stuff
   },
 
 
-
-
-
-{ "description": "q nav layer mod",
+  { "description": "refresh mapping 2",
     "manipulators": [
       {
         "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
           {
             "type": "variable_if",
             "name": "nav_layer",
             "value": 1
           }
+
         ],
         "from": {
-          "key_code": "j",
+          "key_code": "r",
           "modifiers": {
             "mandatory": [
               "command"
@@ -85,140 +56,47 @@ hyphen stuff
         },
         "to": [
           {
-            "key_code": "p"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  }
-
-                    {
-                        "description": "center eligius time 2",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "escape",
-
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-
-                                "to": {
-                                  "key_code": "equal_sign",
-                                  "modifiers": [
-                                    "command",
-                                    "option"
-                                  ]
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-  {
-    "description": "parens open",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "h",
-          "modifiers": {
-            "mandatory": [
-              "option",
-              "shift"
+            "key_code": "r",
+            "modifiers": [
+              "command"
             ]
           }
-        },
-        "to": {
-          "key_code": "9",
-          "modifiers": [
-            "shift"
-          ]
-        },
+        ],
         "type": "basic"
       }
     ]
   },
 
 
-{
-  "description": "fromU - iterm vim cmd shift U to opt 7",
-  "manipulators": [
-  {
-    "conditions": [
-    {
-      "bundle_identifiers": [
-        "com.googlecode.iterm2"
-      ],
-      "type": "frontmost_application_if"
-    }
-    ],
-    "from": {
-      "key_code": "u",
-      "modifiers": {
-        "mandatory": [
-          "command",
-        "shift"
-        ]
+  { "description": "disable command r refresh since command t new tab is close to thi",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##browsers",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
       }
-    },
-    "to": [
-    {
-      "key_code": "7",
-      "modifiers": [
-        "option",
-      "shift"
-      ]
-    }
-    ],
-    "type": "basic"
-  }
-  ]
-},
 
-{
-  "description": "fromI - iterm vim cmd shift I to opt shift 8",
-  "manipulators": [
-  {
-    "conditions": [
-    {
-      "bundle_identifiers": [
-        "com.googlecode.iterm2"
-      ],
-      "type": "frontmost_application_if"
-    }
-    ],
-    "from": {
-      "key_code": "i",
-      "modifiers": {
-        "mandatory": [
-          "command",
-        "shift"
-        ]
-      }
-    },
-    "to": [
-    {
-      "key_code": "8",
-      "modifiers": [
-        "option",
-      "shift"
-      ]
-    }
-    ],
-    "type": "basic"
-  }
-  ]
-},
-
-
-<M-&>
-
-  waht are
-var a
-
-
-
-
+    ]
+  },

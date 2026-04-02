@@ -149,43 +149,6 @@
   },
 
   {
-    "description": "tmux quit pane",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": "##editorsandterms",
-            "type": "frontmost_application_if"
-          },
-
-          {
-            "type": "variable_if",
-            "name": "nav_layer",
-            "value": 1
-          }
-        ],
-        "from": {
-          "key_code": "v",
-          "modifiers": {
-            "mandatory": [
-              "command"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "q",
-            "modifiers": [
-              "option"
-            ]
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
     "description": "renumber tmux panes",
     "manipulators": [
       {

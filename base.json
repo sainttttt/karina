@@ -127,7 +127,7 @@
                                         "bundle_identifiers": [
                                             "^com.2googlecode.iterm2$"
                                         ],
-                                        "type": "frontmost_application_if"
+                                       "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {

@@ -196,6 +196,37 @@
     ]
   },
 
+
+  { "description": "Switch to Opera GX",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "slash",
+          "modifiers": {
+            "mandatory": [
+              "option",
+              "shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "shell_command": "open -a '/Applications/Opera GX.app/Contents/MacOS/Opera'"
+          },
+          {
+            "key_code": "2",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+
   {
     "description": "fromQ - disables",
     "manipulators": [
@@ -277,10 +308,17 @@
     ]
   },
 
-  {
-    "description": "fromW - Switch to Neovide",
+  { "description": "fromW - Switch to Neovide",
     "manipulators": [
       {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.neovide.neovide"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
         "from": {
           "key_code": "e",
           "modifiers": {
@@ -307,10 +345,56 @@
     ]
   },
 
+  { "description": "Back Switch to Neovide",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.neovide.neovide"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "e",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "tab",
+            "modifiers": [
+              "command"
+            ]
+
+          },
+          {
+            "key_code": "vk_none"
+          }
+        ],
+        "type": "basic"
+      }
+
+    ]
+  },
+
   {
     "description": "Switch to Discord browser",
     "manipulators": [
       {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "org.chromium.Thorium"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
         "from": {
           "key_code": "e",
           "modifiers": {
@@ -322,15 +406,60 @@
         },
         "to": [
           {
+            "shell_command": "open -a '/Applications/Thorium.app/Contents/MacOS/Thorium'"
+          },
+
+          {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 300
+          },
+
+          {
             "key_code": "2",
             "modifiers": [
               "control"
             ]
+          }
+        ],
+        "type": "basic"
+      }
+
+    ]
+  },
+
+  {
+    "description": "Back Switch to Discord browser",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "org.chromium.Thorium"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "e",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "tab",
+            "modifiers": [
+              "command"
+            ]
 
           },
           {
-            "shell_command": "open -a '/Applications/Thorium.app/Contents/MacOS/Thorium'"
+            "key_code": "vk_none"
           }
+
         ],
         "type": "basic"
       }
@@ -421,14 +550,35 @@
   },
 
 
-  {
-    "description": "fromE - Switch to Telegram Lite",
+  { "description": "fromE - Switch to Telegram Lite",
     "manipulators": [
       {
+
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "org.telegram.desktop"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
         "from": {
-          "key_code": "f13"
+          "key_code": "w",
+          "modifiers": {
+            "mandatory": [
+              "shift",
+              "option"
+            ]
+          }
         },
         "to": [
+          {
+            "shell_command": "open -a '/Applications/Telegram Lite.app/Contents/MacOS/Telegram Lite'"
+          },
+          {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 300
+          },
           {
             "key_code": "2",
             "modifiers": [
@@ -436,14 +586,9 @@
             ]
           },
           {
-            "shell_command": "open -a '/Applications/Telegram Lite.app/Contents/MacOS/Telegram Lite'"
-          },
-
-          {
             "key_code": "vk_none",
             "hold_down_milliseconds": 300
           },
-
           {
             "key_code": "1",
             "modifiers": [
@@ -457,9 +602,17 @@
   },
 
   {
-    "description": "fromE - Switch to Telegram Lite",
+    "description": "alt tab thing for mail",
     "manipulators": [
       {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "org.telegram.desktop"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
         "from": {
           "key_code": "w",
           "modifiers": {
@@ -471,26 +624,16 @@
         },
         "to": [
           {
-            "key_code": "2",
-            "modifiers": [
-              "control"
-            ]
-          },
-          {
-            "shell_command": "open -a '/Applications/Telegram Lite.app/Contents/MacOS/Telegram Lite'"
-          },
-
-          {
-            "key_code": "vk_none",
-            "hold_down_milliseconds": 300
-          },
-
-          {
-            "key_code": "1",
+            "key_code": "tab",
             "modifiers": [
               "command"
             ]
+
+          },
+          {
+            "key_code": "vk_none"
           }
+
         ],
         "type": "basic"
       }
@@ -557,35 +700,6 @@
           },
           {
             "shell_command": "open -a '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'"
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "fromW - Switch to alacritty ",
-    "manipulators": [
-      {
-        "from": {
-          "key_code": "w",
-          "modifiers": {
-            "mandatory": [
-              "shift",
-              "option"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "2",
-            "modifiers": [
-              "control"
-            ]
-          },
-          {
-            "shell_command": "open -a '/Applications/Alacritty.app/Contents/MacOS/alacritty'"
           }
         ],
         "type": "basic"

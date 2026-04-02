@@ -508,6 +508,43 @@
     ]
   },
 
+  {
+    "description": "control v alternative",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##editorsandterms",
+            "type": "frontmost_application_if"
+          },
+
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "v",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "v",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
 { "description": "q nav layer mod",
     "manipulators": [
       {
@@ -612,6 +649,71 @@
       }
     ]
   },
+
+
+  { "description": "disable command opt j for now",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "option"
+            ]
+          }
+        },
+        "to": {
+            "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+  { "description": "disable command opt k for now",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": "##terminals",
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "option"
+            ]
+          }
+        },
+        "to": {
+            "key_code": "vk_none"
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
+
 
   { "description": "vim quit program ",
     "manipulators": [

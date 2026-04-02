@@ -1,0 +1,221 @@
+[
+
+  {
+    "description": "make command 1 in finder show list detail view",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "1",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  {
+    "description": "shortcut to slot 2",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "2",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "g",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          },
+          {"shell_command":"osascript -e 'set temp to the clipboard \n delay 0.1 \n set the clipboard to \"~/Downloads/\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.15 \n end tell \n set the clipboard to temp \n tell application \"System Events\" to keystroke return'"}
+
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+  {
+    "description": "Finder new",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "e",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "n",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "g",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          },
+          {"shell_command":"osascript -e 'set temp to the clipboard \n delay 0.1 \n set the clipboard to \"~/Downloads/\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.15 \n end tell \n set the clipboard to temp \n tell application \"System Events\" to keystroke return'"}
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+  {
+    "description": "finder view 1",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "1",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "1",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+
+
+
+
+  {
+    "description": "shortcut to slot 3",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com.apple.finder$"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "3",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "g",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          },
+          {
+            "key_code": "vk_none",
+            "hold_down_milliseconds": 100
+          },
+          {"shell_command":"osascript -e 'set temp to the clipboard \n delay 0.1 \n set the clipboard to \"~/Screenshots/\" \n tell application \"System Events\" \n   keystroke \"v\" using command down \n   delay 0.15 \n end tell \n set the clipboard to temp \n tell application \"System Events\" to keystroke return'"}
+        ],
+        "type": "basic"
+      }
+    ]
+  }
+]
