@@ -545,6 +545,43 @@
     ]
   },
 
+  {
+    "description": "close terminal window",
+    "manipulators": [
+
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "com.googlecode.iterm2"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "w",
+          "modifiers": {
+            "mandatory": [
+              "command",
+              "option",
+              "shift"
+
+            ]
+          }
+        },
+
+        "to": {
+          "key_code": "w",
+          "modifiers": [
+            "command"
+                                    ]
+
+        },
+        "type": "basic"
+      }
+    ]
+  },
+
 { "description": "q nav layer mod",
     "manipulators": [
       {
@@ -1118,7 +1155,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {
@@ -1157,7 +1194,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": "##terminals",
+            "bundle_identifiers": "##editorsandterms",
             "type": "frontmost_application_if"
           },
           {

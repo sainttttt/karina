@@ -6,5 +6,6 @@
   "com.brave.Browser",
   "com.google.Chrome",
   "org.mozilla.nightly",
-  "org.mozilla.librewolf"
+  "org.mozilla.librewolf",
+  "app.floorp.Floorp"
 ]

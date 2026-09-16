@@ -205,72 +205,7 @@
     ]
   },
 
-  {
-    "description": "Discord Jump Down Channel Unread",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": "##discord",
-            "type": "frontmost_application_if"
-          },
-          {
-            "type": "variable_if",
-            "name": "nav_layer",
-            "value": 1
-          }
-        ],
-        "from": {
-          "key_code": "j"
-        },
-        "to": [
-          {
-            "key_code": "down_arrow",
-            "modifiers": [
-              "option",
-              "shift"
-            ]
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "Discord Jump Down Channel Unread",
-    "manipulators": [
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": "##discord",
-            "type": "frontmost_application_if"
-          },
-          {
-            "type": "variable_if",
-            "name": "nav_layer",
-            "value": 2
-          }
-        ],
-        "from": {
-          "key_code": "j"
-        },
-        "to": [
-          {
-            "key_code": "down_arrow",
-            "modifiers": [
-              "option",
-              "command"
-            ]
-          }
-        ],
-        "type": "basic"
-      }
-    ]
-  },
-
-  {
-    "description": "Discord Jump Down Channel Unread",
+  { "description": "Discord Jump Down Channel",
     "manipulators": [
       {
         "conditions": [
@@ -296,8 +231,7 @@
           {
             "key_code": "down_arrow",
             "modifiers": [
-              "option",
-              "shift"
+              "option"
             ]
           }
         ],
@@ -307,7 +241,7 @@
   },
 
   {
-    "description": "Discord Jump Up Channel Unread",
+    "description": "Discord Jump Up Channel",
     "manipulators": [
       {
         "conditions": [
@@ -333,8 +267,7 @@
           {
             "key_code": "up_arrow",
             "modifiers": [
-              "option",
-              "shift"
+              "option"
             ]
           }
         ],

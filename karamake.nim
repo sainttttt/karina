@@ -34,6 +34,14 @@ proc genKaraJson(addSubs = false, write = false): JsonNode =
 
   return baseJson
 
+proc getCurrentSpace*(): int =
+  let cmd = """defaults read com.apple.spaces | awk '/"Current Space"/ {flag=1; next} flag && /ManagedSpaceID/ {gsub(/[^0-9]/, "", $0); print; exit}'"""
+  let raw = execProcess("sh", args = ["-c", cmd], options = {poUsePath}).strip()
+  try:
+    return parseInt(raw)
+  except ValueError:
+    return -1
+
 proc run() =
 
   if paramCount() == 0:
@@ -41,12 +49,17 @@ proc run() =
     return
 
 
-  var currentProg = execProcess("lsappinfo info -only bundlepath `lsappinfo front`")
-  currentProg = currentProg.replace(""""LSBundlePath"=""", "")
+  # Reliable across macOS versions:
+  let currentProgCmd = """osascript -e 'tell application "System Events" to get POSIX path of (file of first application process whose frontmost is true)'"""
+  let currentProg = execProcess(currentProgCmd).strip()
 
-  var currentSpace = execProcess("""osascript -e 'tell application ¬' -e    '"System Events" to tell process ¬' -e    '"WhichSpace" to set temp to (title of menu bar items of menu bar 1)' -e 'return item 1 of temp'""")
+  var currentSpace = $getCurrentSpace()
+
+  writeFile(expandTilde(&"~/karalog1.out"), currentSpace)
 
   currentSpace = currentSpace.replace("\n", "")
+
+  #_ writeFile(expandTilde(&"~/karalog1.out"), currentSpace)
 
   var baseJson = genKaraJson(addSubs = false)
   writeFile(expandTilde(&"~/karalog1.json"), baseJson.pretty)

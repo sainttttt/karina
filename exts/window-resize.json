@@ -1,0 +1,29 @@
+[
+  { "description": "zoom window",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "nav_layer",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "a",
+          "modifiers": {
+            "mandatory": [
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+          "shell_command": "yabai -m window --toggle zoom-fullscreen"
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  }
+]

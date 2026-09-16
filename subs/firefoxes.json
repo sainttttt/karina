@@ -1,3 +1,4 @@
 [
-  "^org.mozilla.firefox*"
+  "^org.mozilla.firefox*",
+  "app.floorp.Floorp"
 ]

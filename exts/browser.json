@@ -216,9 +216,7 @@
       {
         "conditions": [
           {
-            "bundle_identifiers": [
-              "^org.mozilla.*"
-            ],
+            "bundle_identifiers": "##firefoxes",
             "type": "frontmost_application_if"
           },
           {

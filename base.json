@@ -189,41 +189,6 @@
                     },
 
                     {
-                        "description": "fromW - zsh iTerm macros",
-                        "manipulators": [
-
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "option"
-                                        ]
-                                    }
-                                },
-
-                                "to": {
-                                    "key_code": "w",
-                                    "modifiers": [
-                                        "command"
-                                    ]
-
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
                         "description": "fromS - zsh iTerm macros",
                         "manipulators": [
 
@@ -838,60 +803,6 @@
                                 "type": "basic"
                             }
 
-                        ]
-                    },
-
-                    {
-                        "description": "Screenshot",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "4",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "4",
-                                        "modifiers": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-
-                    {
-                        "description": "Record Screen",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "3",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "5",
-                                        "modifiers": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
                         ]
                     },
 
